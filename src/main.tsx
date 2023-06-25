@@ -4,7 +4,7 @@
 import React from "react";
 import * as ReactDOMClient from "react-dom/client";
 import App from "./App.tsx";
-import "./index.scss";
+import "./index.css";
 import {RootProvider} from "./contexts/RootProvider.tsx";
 import {BrowserRouter as Router} from "react-router-dom";
 

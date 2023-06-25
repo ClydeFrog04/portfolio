@@ -1,4 +1,4 @@
-import "./App.scss";
+import "./App.css";
 import {Route, Routes, useNavigate} from "react-router-dom";
 import Button from "./components/Button/Button";
 import Calculatorinator from "@portfolio-monorepo/calculator/src/pages/Calculatorinator.tsx";
