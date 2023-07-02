@@ -14,7 +14,8 @@ function App() {
                     element={
                         <div className="homeWrapper">
                             <h1>Hello! Welcome to my site! Checkout some of my projects below!</h1>
-                            <span>Remeber, this site is still a work in progress!</span>
+                            <span>Remember, this site is still a work in progress!</span>
+                            <span>Check out some of my project(s) while you're here!</span>
                             <Button text={"Calculatorinator"} onClick={(e) => {
                                 navigate("/calculatorinator");
                             }}/>

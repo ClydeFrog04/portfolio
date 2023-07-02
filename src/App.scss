@@ -7,8 +7,13 @@
     //margin: 0 auto;
     //padding: 2rem;
     //text-align: center;
+    position: fixed; //position fixed with height 100% is required for mobile device browsers with address bars that change visibility
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    //height: 100vh;
     display: flex;
-    height: 100vh;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -16,6 +21,17 @@
     color: white;
 
     .calculatorinatorContainer {
+
+    }
+
+    .homeWrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+        padding: 1rem;
 
     }
 }
