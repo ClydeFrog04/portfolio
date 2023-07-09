@@ -6,7 +6,9 @@ import React, {PropsWithChildren} from "react";
 import "./Button.css";
 interface ButtonProps{
     text: string;
-    onClick?: (e: React.MouseEvent) => any;
+    onClick?: (e: React.MouseEvent) => void;
+    id?: string;
+    class?: string;
 }
 
 const Button = (props: PropsWithChildren<ButtonProps>) => {
