@@ -21,11 +21,9 @@ const MazeGameContainer = (props: MazeGameContainerProps) => {
 
     const messageHandler = (e: MessageEvent) => {
         console.log(TAG, "message received:", e);
-
     };
 
     useEffect(() => {
-
         window.addEventListener("message", messageHandler);
         return function cleanUp() {
             window.removeEventListener("message", messageHandler);
@@ -38,7 +36,7 @@ const MazeGameContainer = (props: MazeGameContainerProps) => {
             <img className={"beeIcon"} src={beeIcon} onClick={ () => {
                 navigate("/");
             }} alt="an icon that is also a bee buzzzzzz"/>
-            {isLoaded === false && (
+            {!isLoaded && (
                 <div className="loading-overlay">
                     <p>Loading... ({loadingPercentage}%)</p>
                 </div>
