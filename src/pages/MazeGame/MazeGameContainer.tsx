@@ -50,19 +50,3 @@ const MazeGameContainer = (props: MazeGameContainerProps) => {
 };
 
 export default MazeGameContainer;
-
-/*
-  return (
-    <div className="container">
-      {isLoaded === false && (
-        // We'll conditionally render the loading overlay if the Unity
-        // Application is not loaded.
-        <div className="loading-overlay">
-          <p>Loading... ({loadingPercentage}%)</p>
-        </div>
-      )}
-      <Unity className="unity" unityProvider={unityProvider} />
-    </div>
-  );
-}
- */
