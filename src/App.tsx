@@ -2,6 +2,7 @@ import "./App.css";
 import {Route, Routes, useNavigate} from "react-router-dom";
 import Button from "./components/Button/Button";
 import Calculatorinator from "@portfolio-monorepo/calculator/src/pages/Calculatorinator.tsx";
+import MazeGameContainer from "./pages/MazeGame/MazeGameContainer.tsx";
 
 function App() {
     const navigate = useNavigate();
@@ -19,6 +20,9 @@ function App() {
                             <Button text={"Calculatorinator"} onClick={(e) => {
                                 navigate("/calculatorinator");
                             }}/>
+                            <Button text={"Penguin Labyrinth"} onClick={(e) => {
+                                navigate("/mazeGame");
+                            }}/>
                         </div>
                     }
                 />
@@ -28,6 +32,12 @@ function App() {
                         <div className="calculatorinatorContainer">
                             <Calculatorinator/>
                         </div>
+                    }
+                />
+                <Route
+                    path={"mazeGame"}
+                    element={
+                        <MazeGameContainer/>
                     }
                 />
             </Routes>
