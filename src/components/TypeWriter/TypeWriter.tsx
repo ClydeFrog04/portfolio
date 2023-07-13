@@ -35,7 +35,7 @@ const TypeWriter = (props: TypeWriterProps) => {
 
     const doTypeWriter = () => {
         timer.current = setTimeout(() => {
-            if (explodeOnPhrase !== undefined && explodeOnPhrase === phrases[currentPhraseIndex]) {
+            if (explodeOnPhrase === phrases[currentPhraseIndex]) {
                 setDoExplode(true);
                 setText(finalText);
                 sleep(3000).then( (res) => {
@@ -66,6 +66,7 @@ const TypeWriter = (props: TypeWriterProps) => {
     useEffect(() => {
 
         doTypeWriter();
+        // setText(finalText);
 
         return () => {
             clearTimeout(timer.current);

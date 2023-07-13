@@ -17,7 +17,7 @@ function App() {
                         <div className="homeWrapper">
                             <TypeWriter phrases={[
                                 "Welcome to my site!",
-                                "Please checkout one of my projects below!",
+                                "Please check out one of my projects below!",
                                 "Remember, this site is still a work in progress!",
                                 "You like my typewriter? Checkout how i made it on my github!",
                                 "Thanks for visiting",
@@ -38,7 +38,9 @@ function App() {
                                 "AAAAHAHAHHHHHHHHHHHH!!!",
                                 "phew! Now that that's over with!"
                             ]}
+                                        // explodeOnPhrase={"Please check out one of my projects below!"}
                                         explodeOnPhrase={"AAAAHAHAHHHHHHHHHHHH!!!"}
+
                             />
                             {/*<h1>Hello! Welcome to my site! Checkout some of my projects below!</h1>*/}
                             {/*<span>Remember, this site is still a work in progress!</span>*/}

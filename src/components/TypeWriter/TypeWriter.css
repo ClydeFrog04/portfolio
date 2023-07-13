@@ -50,19 +50,22 @@
 .typeWriter {
   font-size: 1.5rem;
   padding-right: 2px;
-  border-right: 4px solid orange;
-  animation: blinkCursor 1s step-end infinite;
 }
 .typeWriter.explode {
   animation: explode 1s linear forwards;
 }
+.typeWriter:after {
+  content: "|";
+  color: orange;
+  animation: blinkCursor 1s step-end infinite;
+}
 
 @keyframes blinkCursor {
   from, to {
-    border-color: transparent;
+    color: transparent;
   }
   50% {
-    border-color: orange;
+    color: orange;
   }
 }
 @keyframes explode {
