@@ -13,6 +13,7 @@ const TypeWriter = (props: TypeWriterProps) => {
     const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
     const [finalText, setFinalText] = useState(props.phrases[currentPhraseIndex]);
     const [doExplode, setDoExplode] = useState(false);
+    const [doShake, setDoShake] = useState(false);
 
     const {phrases, explodeOnPhrase} = props;
 
@@ -36,13 +37,18 @@ const TypeWriter = (props: TypeWriterProps) => {
     const doTypeWriter = () => {
         timer.current = setTimeout(() => {
             if (explodeOnPhrase === phrases[currentPhraseIndex]) {
-                setDoExplode(true);
                 setText(finalText);
-                sleep(3000).then( (res) => {
-                    setDoExplode(false);
-                    setText("");
-                    moveToNextPhrase();
+                setDoShake(true);
+                sleep(1000).then( (res) => {
+                    setDoShake(false);
+                    setDoExplode(true);
+                    sleep(3000).then( (res) => {
+                        setDoExplode(false);
+                        setText("");
+                        moveToNextPhrase();
+                    });
                 });
+
             } else {
                 if (isTyping) {
                     if (text !== finalText) {
@@ -66,6 +72,7 @@ const TypeWriter = (props: TypeWriterProps) => {
     useEffect(() => {
 
         doTypeWriter();
+        // setDoShake(true);
         // setText(finalText);
 
         return () => {
@@ -75,7 +82,7 @@ const TypeWriter = (props: TypeWriterProps) => {
 
 
     return (
-        <div className={`typeWriter ${doExplode ? "explode" : ""}`.trimEnd()}>
+        <div className={`typeWriter ${doExplode ? "explode" : ""} ${doShake ? "shake" : ""}`.trimEnd()}>
             {text}
         </div>
     );

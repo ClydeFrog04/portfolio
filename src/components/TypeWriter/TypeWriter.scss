@@ -8,9 +8,11 @@
     //border-right: 4px solid orange;
 
     //animation: blinkCursor 1s step-end infinite;
-
     &.explode{
         animation: explode 1s linear forwards;
+    }
+    &.shake{
+        animation: shake .1s linear infinite alternate;
     }
     &:after{
         content: "|";
@@ -27,6 +29,18 @@
     50%{
         //border-color: orange;
         color: orange;
+    }
+}
+
+@keyframes shake {
+    //from, to{
+    //    transform: rotateZ(0);
+    //}
+    from{
+        transform: rotateZ(-2.5deg);
+    }
+    to{
+        transform: rotateZ(2.5deg);
     }
 }
 
