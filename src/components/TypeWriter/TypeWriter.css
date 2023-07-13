@@ -47,30 +47,29 @@
     font-size: 2.75rem;
   }
 }
-.App {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  overflow: hidden;
-  color: white;
+.typeWriter {
+  font-size: 1.5rem;
+  padding-right: 2px;
+  border-right: 4px solid orange;
+  animation: blinkCursor 1s step-end infinite;
 }
-.App .homeWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 1rem;
-  padding: 1rem;
-}
-.App .homeWrapper .typeWriter {
-  margin-bottom: 1rem;
+.typeWriter.explode {
+  animation: explode 1s linear forwards;
 }
 
-/*# sourceMappingURL=App.css.map */
+@keyframes blinkCursor {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+@keyframes explode {
+  to {
+    transform: scale(10);
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=TypeWriter.css.map */
