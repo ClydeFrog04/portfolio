@@ -1,0 +1,55 @@
+@use "../../shared/Colors" as *;
+@use "../../shared/Variables" as *;
+@use "../../shared/Styles" as *;
+
+.typeWriter{
+    font-size: 1.5rem;
+    padding-right: 2px;
+    //border-right: 4px solid orange;
+
+    //animation: blinkCursor 1s step-end infinite;
+    &.explode{
+        animation: explode 1s linear forwards;
+    }
+    &.shake{
+        animation: shake .1s linear infinite alternate;
+    }
+    &:after{
+        content: "|";
+        color: orange;
+        animation: blinkCursor 1s step-end infinite;
+    }
+}
+
+@keyframes blinkCursor {
+    from, to{
+        //border-color: transparent;
+        color: transparent;
+    }
+    50%{
+        //border-color: orange;
+        color: orange;
+    }
+}
+
+@keyframes shake {
+    //from, to{
+    //    transform: rotateZ(0);
+    //}
+    from{
+        transform: rotateZ(-2.5deg);
+    }
+    to{
+        transform: rotateZ(2.5deg);
+    }
+}
+
+@keyframes explode {
+    from{
+
+    }
+    to{
+        transform: scale(10);
+        opacity: 0;
+    }
+}

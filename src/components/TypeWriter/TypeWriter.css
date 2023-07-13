@@ -1,0 +1,89 @@
+.rightAlign {
+  text-align: right;
+}
+
+.leftAlign {
+  text-align: left;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.fadeOut {
+  animation: fadeout 0.5s forwards;
+}
+
+.fadeIn {
+  animation: fadein 0.5s forwards;
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.75rem;
+  }
+}
+.typeWriter {
+  font-size: 1.5rem;
+  padding-right: 2px;
+}
+.typeWriter.explode {
+  animation: explode 1s linear forwards;
+}
+.typeWriter.shake {
+  animation: shake 0.1s linear infinite alternate;
+}
+.typeWriter:after {
+  content: "|";
+  color: orange;
+  animation: blinkCursor 1s step-end infinite;
+}
+
+@keyframes blinkCursor {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: orange;
+  }
+}
+@keyframes shake {
+  from {
+    transform: rotateZ(-2.5deg);
+  }
+  to {
+    transform: rotateZ(2.5deg);
+  }
+}
+@keyframes explode {
+  to {
+    transform: scale(10);
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=TypeWriter.css.map */
