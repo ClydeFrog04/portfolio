@@ -23,19 +23,14 @@
 
 @keyframes blinkCursor {
     from, to{
-        //border-color: transparent;
         color: transparent;
     }
     50%{
-        //border-color: orange;
         color: orange;
     }
 }
 
 @keyframes shake {
-    //from, to{
-    //    transform: rotateZ(0);
-    //}
     from{
         transform: rotateZ(-2.5deg);
     }
@@ -45,9 +40,7 @@
 }
 
 @keyframes explode {
-    from{
-
-    }
+    from{}
     to{
         transform: scale(10);
         opacity: 0;

@@ -51,6 +51,7 @@ function App() {
                             <Button text={"Penguin Labyrinth"} onClick={(e) => {
                                 navigate("/mazeGame");
                             }}/>
+
                         </div>
                     }
                 />
