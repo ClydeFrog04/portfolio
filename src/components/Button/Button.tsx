@@ -14,7 +14,6 @@ interface ButtonProps{
 const Button = (props: PropsWithChildren<ButtonProps>) => {
     const TAG = "[Button.tsx]";
     const handleClick = (e: React.MouseEvent) => {
-        console.log(TAG, props.text, "clicked!");
         if(props.onClick){
             props.onClick(e);
         }
