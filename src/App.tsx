@@ -59,7 +59,7 @@ function App() {
                     path={"calculatorinator"}
                     element={
                         <div className="calculatorinatorContainer">
-                            <Calculatorinator/>
+                            <Calculatorinator navigate={navigate}/>
                         </div>
                     }
                 />
