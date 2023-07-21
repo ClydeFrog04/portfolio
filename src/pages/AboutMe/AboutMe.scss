@@ -1,0 +1,39 @@
+@use "../../shared/Styles" as *;
+@use "../../shared/Colors" as *;
+@use "../../shared/Variables" as *;
+
+.aboutMe{
+    @include flexCenterColumn();
+    @include fitContainer();
+    text-align: center;
+    gap: 1rem;
+
+    img{
+        max-width: 200px;
+        border-radius: 14px;
+    }
+
+    p{
+        width: 50%;
+    }
+
+    .socialLinks{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 1rem;
+        a{
+            color: white;
+        }
+        .fa{
+            font-size: 50px;
+
+            &:hover{
+                cursor: pointer;
+                font-size: 55px;
+                //box-shadow: rebeccapurple 4px 4px 10px;
+            }
+        }
+    }
+
+}
