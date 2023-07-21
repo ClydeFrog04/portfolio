@@ -2,15 +2,4 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    .beeIcon{
-        position: absolute;
-        top: .1rem;
-        left: .5rem;
-        width: 3rem;
-
-        &:hover{
-            cursor: pointer;
-        }
-    }
 }

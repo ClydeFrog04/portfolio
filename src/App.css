@@ -57,8 +57,17 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  overflow: scroll;
+  overflow: hidden;
   color: white;
+}
+.App .beeIcon {
+  position: absolute;
+  top: 0.1rem;
+  left: 0.5rem;
+  width: 3rem;
+}
+.App .beeIcon:hover {
+  cursor: pointer;
 }
 .App .homeWrapper {
   display: flex;

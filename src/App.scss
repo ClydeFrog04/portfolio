@@ -17,8 +17,19 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    overflow: scroll;
+    overflow: hidden;
     color: white;
+
+    .beeIcon{
+        position: absolute;
+        top: .1rem;
+        left: .5rem;
+        width: 3rem;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
 
     .calculatorinatorContainer {
 
