@@ -4,12 +4,18 @@ import Button from "./components/Button/Button";
 import Calculatorinator from "@portfolio-monorepo/calculator/src/pages/Calculatorinator.tsx";
 import MazeGameContainer from "./pages/MazeGame/MazeGameContainer.tsx";
 import TypeWriter from "./components/TypeWriter/TypeWriter.tsx";
+import AboutMe from "./pages/AboutMe/AboutMe.tsx";
+import beeIcon from "../res/TransbeeIconMedium.png";
+import React from "react";
 
 function App() {
     const navigate = useNavigate();
 
     return (
         <div className="App">
+            <img className={"beeIcon"} src={beeIcon} onClick={ () => {
+                navigate("/");
+            }} alt="an icon that is also a bee buzzzzzz"/>
             <Routes>
                 <Route
                     path={"/"}
@@ -51,7 +57,9 @@ function App() {
                             <Button text={"Penguin Labyrinth"} onClick={(e) => {
                                 navigate("/mazeGame");
                             }}/>
-
+                            <Button text={"About Me!"} onClick={(e) => {
+                                navigate("/aboutMe");
+                            }}/>
                         </div>
                     }
                 />
@@ -67,6 +75,12 @@ function App() {
                     path={"mazeGame"}
                     element={
                         <MazeGameContainer/>
+                    }
+                />
+                <Route
+                    path={"aboutMe"}
+                    element={
+                        <AboutMe/>
                     }
                 />
             </Routes>

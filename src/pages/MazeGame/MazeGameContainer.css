@@ -3,14 +3,5 @@
   align-items: center;
   justify-content: center;
 }
-.mazeGameContainer .beeIcon {
-  position: absolute;
-  top: 0.1rem;
-  left: 0.5rem;
-  width: 3rem;
-}
-.mazeGameContainer .beeIcon:hover {
-  cursor: pointer;
-}
 
 /*# sourceMappingURL=MazeGameContainer.css.map */

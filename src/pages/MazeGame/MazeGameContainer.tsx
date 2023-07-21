@@ -33,9 +33,6 @@ const MazeGameContainer = (props: MazeGameContainerProps) => {
 
     return (
         <div className="mazeGameContainer">
-            <img className={"beeIcon"} src={beeIcon} onClick={ () => {
-                navigate("/");
-            }} alt="an icon that is also a bee buzzzzzz"/>
             {!isLoaded && (
                 <div className="loading-overlay">
                     <p>Loading... ({loadingPercentage}%)</p>
