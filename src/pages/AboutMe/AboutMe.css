@@ -61,9 +61,6 @@
   max-width: 200px;
   border-radius: 14px;
 }
-.aboutMe p {
-  width: 50%;
-}
 .aboutMe .socialLinks {
   position: absolute;
   bottom: 0;
@@ -79,6 +76,11 @@
 .aboutMe .socialLinks .fa:hover {
   cursor: pointer;
   font-size: 55px;
+}
+@media (width > 1500px) {
+  .aboutMe p {
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=AboutMe.css.map */

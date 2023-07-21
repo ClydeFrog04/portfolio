@@ -1,3 +1,6 @@
+//@use "/shared/Styles" as *;
+//@use "/shared/Colors" as *;
+//@use "/shared/Variables" as *;
 @use "../../shared/Styles" as *;
 @use "../../shared/Colors" as *;
 @use "../../shared/Variables" as *;
@@ -11,10 +14,6 @@
     img{
         max-width: 200px;
         border-radius: 14px;
-    }
-
-    p{
-        width: 50%;
     }
 
     .socialLinks{
@@ -36,4 +35,9 @@
         }
     }
 
+    @media(width > $breakpointDesktop){
+        p{
+            width: 50%;
+        }
+    }
 }
