@@ -2,6 +2,7 @@ import "./App.css";
 import {Route, Routes, useNavigate} from "react-router-dom";
 import Button from "./components/Button/Button";
 import Calculatorinator from "@portfolio-monorepo/calculator/src/pages/Calculatorinator.tsx";
+import DiscoverWeeklySaver from "@portfolio-monorepo/SpotifyWeb/src/Pages/DiscoverWeeklySaver.tsx";
 import MazeGameContainer from "./pages/MazeGame/MazeGameContainer.tsx";
 import TypeWriter from "./components/TypeWriter/TypeWriter.tsx";
 import AboutMe from "./pages/AboutMe/AboutMe.tsx";
@@ -51,6 +52,9 @@ function App() {
                             {/*<h1>Hello! Welcome to my site! Checkout some of my projects below!</h1>*/}
                             {/*<span>Remember, this site is still a work in progress!</span>*/}
                             {/*<span>Check out some of my project(s) while you're here!</span>*/}
+                            <Button text={"Spotify DW Saver"} onClick={(e) => {
+                                navigate("/spotify");
+                            }}/>
                             <Button text={"Calculatorinator"} onClick={(e) => {
                                 navigate("/calculatorinator");
                             }}/>
@@ -60,6 +64,14 @@ function App() {
                             <Button text={"About Me!"} onClick={(e) => {
                                 navigate("/aboutMe");
                             }}/>
+                        </div>
+                    }
+                />
+                <Route
+                    path={"spotify"}
+                    element={
+                        <div className="spotifyContainer">
+                            <DiscoverWeeklySaver/>
                         </div>
                     }
                 />

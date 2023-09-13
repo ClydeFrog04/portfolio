@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    overflow: hidden;
+    overflow: scroll;
     color: white;
 
     .beeIcon{
@@ -33,6 +33,19 @@
 
     .calculatorinatorContainer {
 
+    }
+    .spotifyContainer{
+        width: 100%;
+        height: 100%;
+        justify-self: flex-start;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 2rem;
+        text-align: center;
+        .playlist{
+            margin-top: 1rem;
+            gap: 1rem;
+        }
     }
 
     .homeWrapper{
