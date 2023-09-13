@@ -11,8 +11,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@portfolio-monorepo/calculator": "workspace:^",
     "@portfolio-monorepo/SpotifyWeb": "workspace:^",
+    "@portfolio-monorepo/calculator": "workspace:^",
+    "@spotify/web-api-ts-sdk": "^1.1.2",
     "@vitejs/plugin-react": "^4.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
