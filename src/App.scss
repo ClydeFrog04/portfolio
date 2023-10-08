@@ -7,18 +7,19 @@
     //margin: 0 auto;
     //padding: 2rem;
     //text-align: center;
-    position: fixed; //position fixed with height 100% is required for mobile device browsers with address bars that change visibility
-    top: 0;
-    left: 0;
-    height: 100%;
+
     width: 100vw;
-    //height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    overflow: scroll;
+    //overflow: scroll;
     color: white;
+
+
+    //top: 0;
+    //left: 0;
 
     .beeIcon{
         position: absolute;
@@ -32,20 +33,14 @@
     }
 
     .calculatorinatorContainer {
-
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .spotifyContainer{
         width: 100%;
-        height: 100%;
-        justify-self: flex-start;
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 2rem;
-        text-align: center;
-        .playlist{
-            margin-top: 1rem;
-            gap: 1rem;
-        }
     }
 
     .homeWrapper{
