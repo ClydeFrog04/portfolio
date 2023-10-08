@@ -16,6 +16,7 @@
     flex-direction: column;
     //overflow: scroll;
     color: white;
+    box-sizing: border-box;
 
 
     //top: 0;
@@ -40,7 +41,13 @@
         justify-content: center;
     }
     .spotifyContainer{
-        width: 100%;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 1rem 0;
+        box-sizing: border-box;
+
     }
 
     .homeWrapper{
