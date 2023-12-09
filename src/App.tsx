@@ -103,7 +103,7 @@ function App() {
                 <Route
                     path={"dissectButtons"}
                     element={
-                    <div className="dissect">
+                    <div className="dissectPage">
                         <Button class={"dissect"} text={"Hover Me!"}/>
                     </div>
                     }
