@@ -66,7 +66,7 @@ function App() {
                             }}/>
 
                             <p>Want to see how I made the buttons?</p>
-                            <Button text={"Learn Mo!"} onClick={(e) => {
+                            <Button text={"Learn More!"} onClick={(e) => {
                                 navigate("/dissectButtons");
                             }}/>
                         </div>
