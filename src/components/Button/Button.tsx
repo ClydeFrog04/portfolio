@@ -20,7 +20,8 @@ const Button = (props: PropsWithChildren<ButtonProps>) => {
     }
 
     return (
-        <button className="button" onClick={handleClick}>
+        <button className={`button ${props.class !== undefined ? props.class : ""}`.trimEnd()} onClick={handleClick}>
+            <div className="shimmerContainer"/>
             {props.text}
         </button>
     );

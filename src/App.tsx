@@ -64,6 +64,11 @@ function App() {
                             <Button text={"About Me!"} onClick={(e) => {
                                 navigate("/aboutMe");
                             }}/>
+
+                            <p>Want to see how I made the buttons?</p>
+                            <Button text={"Learn More!"} onClick={(e) => {
+                                navigate("/dissectButtons");
+                            }}/>
                         </div>
                     }
                 />
@@ -93,6 +98,14 @@ function App() {
                     path={"aboutMe"}
                     element={
                         <AboutMe/>
+                    }
+                />
+                <Route
+                    path={"dissectButtons"}
+                    element={
+                    <div className="dissectPage">
+                        <Button class={"dissect"} text={"Hover Me!"}/>
+                    </div>
                     }
                 />
             </Routes>
