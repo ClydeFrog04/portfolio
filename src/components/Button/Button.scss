@@ -1,8 +1,85 @@
 @use "../../shared/Colors" as *;
 
 .button {
-  background-color: $buttonColor;
-  border: none;
-  padding: 0.9rem 1rem;
-  border-radius: 4px;
+    background-color: $buttonColor;
+    color: antiquewhite;
+    border: none;
+    padding: 0.9rem 1rem;
+    border-radius: 4px;
+    z-index: 0;
+    display: flex;
+
+    position: relative;
+    overflow: hidden;
+
+    &:hover{
+        //animation: rotate 2s linear infinite;
+        transform: scale(110%);
+        &::before{
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        z-index: -2;
+        left: -50%;
+        top: -150%;
+        width: 200%;
+        height: 400%;
+        background-repeat: no-repeat;
+        //background-color: $buttonColor;
+        background-size: 50% 50%, 50% 50%;
+        background-position: 0 0, 0 100%, 100% 100%, 100% 0;
+        background-image: linear-gradient(#D02F56, #D02F56), linear-gradient(#A7D02F, #A7D02F), linear-gradient(#2FD0A9, #2FD0A9), linear-gradient(#582FD0, #582FD0);
+        animation: rotate 4s linear infinite;
+        //transform: scale(300);
+        //transform: rotate(45deg);
+
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        //left: 6px;
+        //top: 6px;
+        //width: calc(100% - 12px);
+        //height: calc(100% - 12px);
+
+        left: 3px;
+        top: 3px;
+        width: calc(100% - 6px);
+        height: calc(100% - 6px);
+        background: $buttonColor;
+        border-radius: 4px;
+    }
+
+    &.dissect{
+        &:hover{
+            overflow: visible;
+            animation: none;
+            //display: none;
+
+            &:before{
+                animation: none;
+                //display: none;
+                transition: transform 2s;
+                transform: translateX(-100px);
+            }
+            &:after{
+                transition: transform 1s ease-in-out;
+                //opacity: 0;
+                transform: translateX(100px);
+                //display: none;
+            }
+        }
+    }
+
+    @keyframes rotate {
+        100%{
+            transform: rotate(1turn);
+        }
+    }
 }

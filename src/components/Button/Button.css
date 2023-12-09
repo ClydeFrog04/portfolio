@@ -1,8 +1,63 @@
 .button {
   background-color: #4cb050;
+  color: antiquewhite;
   border: none;
   padding: 0.9rem 1rem;
   border-radius: 4px;
+  z-index: 0;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.button:hover {
+  transform: scale(110%);
+}
+.button:hover::before {
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.button::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -150%;
+  width: 200%;
+  height: 400%;
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 0 100%, 100% 100%, 100% 0;
+  background-image: linear-gradient(#D02F56, #D02F56), linear-gradient(#A7D02F, #A7D02F), linear-gradient(#2FD0A9, #2FD0A9), linear-gradient(#582FD0, #582FD0);
+  animation: rotate 4s linear infinite;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 3px;
+  top: 3px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  background: #4cb050;
+  border-radius: 4px;
+}
+.button.dissect:hover {
+  overflow: visible;
+  animation: none;
+}
+.button.dissect:hover:before {
+  animation: none;
+  transition: transform 2s;
+  transform: translateX(-100px);
+}
+.button.dissect:hover:after {
+  transition: transform 1s ease-in-out;
+  transform: translateX(100px);
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
 }
 
 /*# sourceMappingURL=Button.css.map */
