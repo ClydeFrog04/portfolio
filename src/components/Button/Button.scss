@@ -1,4 +1,6 @@
 @use "../../shared/Colors" as *;
+@use "../../shared/Styles" as *;
+@use "../../shared/Variables" as *;
 
 .button {
     background-color: $buttonColor;
@@ -73,6 +75,19 @@
 
                 &:before{
                     animation-duration: 4s;
+                }
+            }
+        }
+    }
+
+    @media (width < $breakpointMobile) {
+        &.dissect{
+            &:hover{
+                &:after{
+                    transform: translateY(150px);
+                }
+                > .shimmerContainer{
+                    transform: translateY(-200px);
                 }
             }
         }

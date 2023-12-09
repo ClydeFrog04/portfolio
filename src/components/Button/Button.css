@@ -1,3 +1,52 @@
+.rightAlign {
+  text-align: right;
+}
+
+.leftAlign {
+  text-align: left;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.fadeOut {
+  animation: fadeout 0.5s forwards;
+}
+
+.fadeIn {
+  animation: fadein 0.5s forwards;
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.75rem;
+  }
+}
 .button {
   background-color: #4cb050;
   color: antiquewhite;
@@ -65,6 +114,14 @@
 }
 .button.dissect:hover > .shimmerContainer:before {
   animation-duration: 4s;
+}
+@media (width < 480px) {
+  .button.dissect:hover:after {
+    transform: translateY(150px);
+  }
+  .button.dissect:hover > .shimmerContainer {
+    transform: translateY(-200px);
+  }
 }
 @keyframes rotate {
   100% {
