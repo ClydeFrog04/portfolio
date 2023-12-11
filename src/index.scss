@@ -1,5 +1,5 @@
-@use "shared/Styles" as *;
-@use "shared/Colors" as *;
+@use "./shared/Styles" as *;
+@use "./shared/Colors" as *;
 
 @include reset();
 

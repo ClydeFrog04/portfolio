@@ -1,0 +1,49 @@
+@use "../../shared/Styles" as *;
+@use "../../shared/Colors" as *;
+@use "../../shared/Variables" as *;
+
+
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    width: 100dvw;
+    //height: 200px;
+    //background-color: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5rem;
+    //color: white;
+    //font-size: 2.15rem;
+
+
+    .beeIcon{
+        position: unset;//resetting because app.scss sets this value- todo: once we like our navbar we can maybe get rid of that! for pages like mazegame, we can not have the navbar and use just the bee icon as it is now!
+    }
+
+    a:not(.name){
+        //text-decoration: none;
+        cursor: pointer;
+        font-size: 1.2rem;
+        //color: $mainTextColor;
+
+        &:hover{
+            font-size: 1.3rem;
+        }
+    }
+
+    .name{
+        font-size: 2.15rem;
+        flex-grow: 1;
+    }
+
+    section{
+        font-size: 1rem;
+
+        display: flex;
+        gap: 1rem;
+        margin: 0 .5rem;
+    }
+}

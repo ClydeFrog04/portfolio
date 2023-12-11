@@ -1,0 +1,12 @@
+@use "../../shared/Styles" as *;
+@use "../../shared/Colors" as *;
+@use "../../shared/Variables" as *;
+
+
+.homePage{
+    @include flexCenterColumn();
+    width: 100vw;
+    width: 100dvw;
+
+
+}
