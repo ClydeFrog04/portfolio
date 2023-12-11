@@ -9,6 +9,7 @@ import AboutMe from "./pages/AboutMe/AboutMe.tsx";
 import beeIcon from "../res/TransbeeIconMedium.png";
 import React from "react";
 import HomePage from "./pages/HomePage/HomePage.tsx";
+import NavBar from "./components/NavBar/NavBar.tsx";
 
 function App() {
     const navigate = useNavigate();

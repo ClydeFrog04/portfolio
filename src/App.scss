@@ -10,13 +10,14 @@
 
     width: 100vw;
     height: 100vh;
-    display: flex;
+    //display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     //overflow: scroll;
     color: white;
     box-sizing: border-box;
+    overflow-x: hidden;
 
 
     //top: 0;

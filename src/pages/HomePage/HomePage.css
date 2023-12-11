@@ -49,11 +49,48 @@
 }
 .homePage {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  align-self: flex-start;
+  justify-self: flex-start;
   width: 100vw;
   width: 100dvw;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  max-width: 100vw;
+  color: white;
+  padding-bottom: 3rem;
+}
+.homePage img {
+  max-width: 50%;
+}
+.homePage section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 0 5rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.homePage .quickAbout .infoContainer h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+.homePage .longAbout {
+  align-items: flex-start;
+}
+.homePage .longAbout h3 {
+  font-style: italic;
+  font-size: 1.7rem;
+}
+.homePage .longAbout .info {
+  width: 75%;
+}
+.homePage .longAbout a {
+  color: white;
+  font-style: italic;
 }
 
 /*# sourceMappingURL=HomePage.css.map */
