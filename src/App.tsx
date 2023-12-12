@@ -19,6 +19,8 @@ function App() {
             {/*<img className={"beeIcon"} src={beeIcon} onClick={ () => {*/}
             {/*    navigate("/");*/}
             {/*}} alt="an icon that is also a bee buzzzzzz"/>*/}
+            {/*todo figure out why navbar in app.tsx works now, why it got links to the left here but not when added to the homepage.tsx but gah it works now so good*/}
+            <NavBar/>
             <Routes>
                 <Route
                     path={"/"}

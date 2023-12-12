@@ -27,6 +27,12 @@
         //max-width: 500px;
         max-width: 50%;
     }
+    h3{
+        font-style: italic;
+        font-size: 1.7rem;
+        width: 25%;
+        text-align: right;
+    }
 
     section{
     //.quickAbout, .longAbout{
@@ -54,10 +60,6 @@
     }
     .longAbout{
         align-items: flex-start;
-        h3{
-            font-style: italic;
-            font-size: 1.7rem;
-        }
 
         .info{
             width: 75%;
@@ -65,6 +67,17 @@
         a{
             color: white;
             font-style: italic;
+        }
+    }
+
+    .projects{
+        align-items: flex-start;
+        //h3{
+        //    width: 25%;
+        //    text-align: right;
+        //}
+        .info{
+            width: 75%;
         }
     }
 }

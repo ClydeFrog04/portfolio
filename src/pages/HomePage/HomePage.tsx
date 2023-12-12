@@ -14,7 +14,7 @@ const HomePage = (props: HomePageProps) =>{
 
     return (
         <div className="homePage">
-            <NavBar/>
+            {/*<NavBar/>*/}
             <section className="quickAbout">
                 <img src={meNKit} alt="This is a picture of me, Randi, and my cat, Kit!"/>
                 <div className="infoContainer">

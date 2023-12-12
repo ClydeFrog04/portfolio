@@ -64,6 +64,12 @@
 .homePage img {
   max-width: 50%;
 }
+.homePage h3 {
+  font-style: italic;
+  font-size: 1.7rem;
+  width: 25%;
+  text-align: right;
+}
 .homePage section {
   display: flex;
   align-items: center;
@@ -81,16 +87,18 @@
 .homePage .longAbout {
   align-items: flex-start;
 }
-.homePage .longAbout h3 {
-  font-style: italic;
-  font-size: 1.7rem;
-}
 .homePage .longAbout .info {
   width: 75%;
 }
 .homePage .longAbout a {
   color: white;
   font-style: italic;
+}
+.homePage .projects {
+  align-items: flex-start;
+}
+.homePage .projects .info {
+  width: 75%;
 }
 
 /*# sourceMappingURL=HomePage.css.map */
