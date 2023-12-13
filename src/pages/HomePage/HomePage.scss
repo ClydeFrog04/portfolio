@@ -7,8 +7,8 @@
     //@include flexCenterColumn();
     display: flex;
     flex-direction: column;
-    align-self: flex-start;
-    justify-self: flex-start;
+    //align-self: flex-start;
+    //justify-self: flex-start;
     width: 100vw;
     width: 100dvw;
     //position: absolute;
@@ -80,8 +80,35 @@
         .info{
             width: 71%;
         }
-        .carousel{
-            flex-basis: 100%;
+        //.carousel{
+        //    //flex-basis: 100%;
+        //}
+    }
+
+    @media (width <= $breakpointMobile) {
+        padding: 3rem 0;
+
+        .quickAbout{
+            flex-direction: column;
+        }
+        .longAbout{
+            flex-direction: column;
+            align-items: center;
+            .info{
+                width: 100%;
+            }
+        }
+
+        .projects{
+            .info{
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        section{
+            padding: 0 1rem;
+            font-size: 1.5rem;
         }
     }
 }
