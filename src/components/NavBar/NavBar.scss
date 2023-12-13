@@ -21,7 +21,8 @@
 
 
     .beeIcon{
-        position: unset;//resetting because app.scss sets this value- todo: once we like our navbar we can maybe get rid of that! for pages like mazegame, we can not have the navbar and use just the bee icon as it is now!
+        //position: unset;//resetting because app.scss sets this value- todo: once we like our navbar we can maybe get rid of that! for pages like mazegame, we can not have the navbar and use just the bee icon as it is now!
+        display: none;
     }
 
     a:not(.name){
@@ -32,6 +33,8 @@
 
         &:hover{
             font-size: 1.3rem;
+            margin-left: -5px;
+            margin-top: -2px;
         }
     }
 
@@ -46,5 +49,90 @@
         display: flex;
         gap: 1rem;
         margin: 0 .5rem;
+    }
+
+    &.menuContainer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 2;
+
+        img {
+            //height: 40px;
+            width: 3rem;
+            z-index: 1;
+            position: absolute;
+            //margin-left: 4px;
+            //margin-top: 4px;
+            left: .5rem;
+            top: .5rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        ;
+        }
+
+        .menu {
+            transition: .5s;
+            transition-timing-function: ease-in-out;
+            //padding-top: 80px;
+            padding: 80px .5rem;
+
+            &.hide {
+                //display: none;
+                //transform: translateY(-100px);
+                //transform: translate(120px, 50%);
+                transform: translateX(-100vw);
+            }
+
+            width: 100Vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            //https://stackoverflow.com/questions/27583937/how-can-i-make-a-css-glass-blur-effect-work-for-an-overlay
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .5rem;
+
+            .colorOptions {
+                width: 80%;
+                height: 50px;
+                font-size: 1rem;
+                border-radius: 4px;
+            }
+
+            .navSections {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: .5rem;
+                width: 100%;
+
+                .button {
+                    width: 50%;
+                }
+
+                section{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-self: center;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @media (width <= $breakpointMobile) {
+        padding: 0;
     }
 }

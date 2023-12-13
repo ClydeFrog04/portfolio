@@ -17,7 +17,7 @@
     //overflow: scroll;
     color: white;
     box-sizing: border-box;
-    overflow-x: hidden;
+    //overflow-x: hidden;
     scroll-behavior: smooth;
 
     .content{
@@ -90,6 +90,10 @@
         .typeWriter {
             margin-bottom: 1rem;
         }
+    }
+
+    @media (width <= $breakpointMobile) {
+        //overflow: visible;
     }
 }
 

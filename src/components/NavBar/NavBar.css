@@ -56,7 +56,7 @@
   padding: 5rem;
 }
 .navBar .beeIcon {
-  position: unset;
+  display: none;
 }
 .navBar a:not(.name) {
   cursor: pointer;
@@ -64,6 +64,8 @@
 }
 .navBar a:not(.name):hover {
   font-size: 1.3rem;
+  margin-left: -5px;
+  margin-top: -2px;
 }
 .navBar .name {
   font-size: 2.15rem;
@@ -74,6 +76,72 @@
   display: flex;
   gap: 1rem;
   margin: 0 0.5rem;
+}
+.navBar.menuContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+}
+.navBar.menuContainer img {
+  width: 3rem;
+  z-index: 1;
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+}
+.navBar.menuContainer img:hover {
+  cursor: pointer;
+}
+.navBar.menuContainer .menu {
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+  padding: 80px 0.5rem;
+  width: 100Vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.navBar.menuContainer .menu.hide {
+  transform: translateX(-100vw);
+}
+.navBar.menuContainer .menu .colorOptions {
+  width: 80%;
+  height: 50px;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+.navBar.menuContainer .menu .navSections {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+.navBar.menuContainer .menu .navSections .button {
+  width: 50%;
+}
+.navBar.menuContainer .menu .navSections section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  width: 100%;
+}
+@media (width <= 480px) {
+  .navBar {
+    padding: 0;
+  }
 }
 
 /*# sourceMappingURL=NavBar.css.map */

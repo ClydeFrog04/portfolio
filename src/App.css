@@ -55,7 +55,6 @@
   flex-direction: column;
   color: white;
   box-sizing: border-box;
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 .App .content {
