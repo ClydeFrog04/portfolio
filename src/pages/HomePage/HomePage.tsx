@@ -2,7 +2,11 @@ import React from "react";
 import "./HomePage.css";
 import NavBar from "../../components/NavBar/NavBar.tsx";
 import meNKit from "../../../res/MeNKit.jpg";
+import bee from "../../../res/TransbeeIconMedium.png";
+import beeStock from "../../../res/beeStockPhoto.jpg";
+import bumbleBee from "../../../res/bumbleBee.png";
 import {NavLink} from "react-router-dom";
+import Carousel from "../../components/Carousel/Carousel.tsx";
 
 interface HomePageProps {
 
@@ -53,9 +57,15 @@ const HomePage = (props: HomePageProps) =>{
                     </p>
                 {/*</section>*/}
             </section>
-            <section className="projects">
+            <section className="projects" id="projects">
                 <h3>Projects</h3>
                 <p className="info">Wanna check out some of my projects?</p>
+                <Carousel carouselLabel={"projects"} projects={[
+                    {name: "Spotify DW Saver", href: "/spotify", imgSrc: meNKit},
+                    {name: "Calculatorinator", href: "/calculatorinator", imgSrc: bee},
+                    {name: "Penguin Labyrinth", href: "/mazeGame", imgSrc: beeStock},
+                    {name: "Buttons", href: "/dissectButtons", imgSrc: bumbleBee},
+                ]}/>
             </section>
         </div>
     );

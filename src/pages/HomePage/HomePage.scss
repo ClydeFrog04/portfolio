@@ -72,12 +72,16 @@
 
     .projects{
         align-items: flex-start;
+        flex-wrap: wrap;
         //h3{
         //    width: 25%;
         //    text-align: right;
         //}
         .info{
-            width: 75%;
+            width: 71%;
+        }
+        .carousel{
+            flex-basis: 100%;
         }
     }
 }

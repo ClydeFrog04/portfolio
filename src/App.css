@@ -56,6 +56,23 @@
   color: white;
   box-sizing: border-box;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.App .content {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.App .dissectPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 50%;
+  position: absolute;
+  top: var(--nav-bar-height);
 }
 .App .beeIcon {
   position: absolute;
@@ -89,6 +106,7 @@
   text-align: center;
   gap: 1rem;
   padding: 1rem;
+  width: 100vw;
 }
 .App .homeWrapper .typeWriter {
   margin-bottom: 1rem;

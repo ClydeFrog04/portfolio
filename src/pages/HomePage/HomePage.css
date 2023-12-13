@@ -96,9 +96,13 @@
 }
 .homePage .projects {
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 .homePage .projects .info {
-  width: 75%;
+  width: 71%;
+}
+.homePage .projects .carousel {
+  flex-basis: 100%;
 }
 
 /*# sourceMappingURL=HomePage.css.map */

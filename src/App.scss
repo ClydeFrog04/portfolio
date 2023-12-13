@@ -18,18 +18,42 @@
     color: white;
     box-sizing: border-box;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    .content{
+        position: absolute;
+        //top: var(--nav-bar-height);
+        //height: calc(100vh - var(--nav-bar-height));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+
+    .dissectPage {
+        //--nav-bar-height
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        //height: calc(100vh - var(--nav-bar-height));
+        height: 50%;
+        position: absolute;
+        top: var(--nav-bar-height);
+        //padding-bottom: 10rem;
+    }
 
 
     //top: 0;
     //left: 0;
 
-    .beeIcon{
+    .beeIcon {
         position: absolute;
         top: .1rem;
         left: .5rem;
         width: 3rem;
 
-        &:hover{
+        &:hover {
             cursor: pointer;
         }
     }
@@ -41,7 +65,8 @@
         align-items: center;
         justify-content: center;
     }
-    .spotifyContainer{
+
+    .spotifyContainer {
         width: 100vw;
         position: absolute;
         top: 0;
@@ -51,7 +76,8 @@
 
     }
 
-    .homeWrapper{
+
+    .homeWrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -59,8 +85,9 @@
         text-align: center;
         gap: 1rem;
         padding: 1rem;
+        width: 100vw;
 
-        .typeWriter{
+        .typeWriter {
             margin-bottom: 1rem;
         }
     }
