@@ -95,9 +95,12 @@ function App() {
                 <Route
                     path={"spotify"}
                     element={
-                        <div className="spotifyContainer">
-                            <DiscoverWeeklySaver/>
-                        </div>
+                        <>
+                            <NavBar/>
+                            <div className="spotifyContainer">
+                                <DiscoverWeeklySaver/>
+                            </div>
+                        </>
                     }
                 />
                 <Route
@@ -111,7 +114,12 @@ function App() {
                 <Route
                     path={"mazeGame"}
                     element={
-                        <MazeGameContainer/>
+                        <>
+                            <img className={"beeIcon"} src={beeIcon} onClick={() => {
+                                navigate("/");
+                            }} alt="an icon that is also a bee buzzzzzz"/>
+                            <MazeGameContainer/>
+                        </>
                     }
                 />
                 <Route
@@ -125,7 +133,6 @@ function App() {
                     element={
                         <>
                             <NavBar/>
-
                             <div className="dissectPage"
                                  style={{"--nav-bar-height": `${navBarHeight + 1}px`} as React.CSSProperties}>
                                 <Button class={"dissect"} text={"Hover Me!"}/>

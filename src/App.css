@@ -93,7 +93,7 @@
 .App .spotifyContainer {
   width: 100vw;
   position: absolute;
-  top: 0;
+  top: var(--nav-bar-height);
   left: 0;
   padding: 1rem 0;
   box-sizing: border-box;

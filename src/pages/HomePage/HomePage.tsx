@@ -2,8 +2,12 @@ import React from "react";
 import "./HomePage.css";
 import NavBar from "../../components/NavBar/NavBar.tsx";
 import meNKit from "../../../res/MeNKit.jpg";
-import bee from "../../../res/TransbeeIconMedium.png";
-import beeStock from "../../../res/beeStockPhoto.jpg";
+// import bee from "../../../res/TransbeeIconMedium.png";
+// import beeStock from "../../../res/beeStockPhoto.jpg";
+// import bumbleBee from "../../../res/bumbleBee.png";
+import spotifyApp from "../../../res/spotifyApp.png";
+import calculator from "../../../res/calculator.png";
+import mazegame from "../../../res/mazegame.png";
 import bumbleBee from "../../../res/bumbleBee.png";
 import {NavLink} from "react-router-dom";
 import Carousel from "../../components/Carousel/Carousel.tsx";
@@ -61,10 +65,10 @@ const HomePage = (props: HomePageProps) =>{
                 <h3>Projects</h3>
                 <p className="info">Wanna check out some of my projects?</p>
                 <Carousel carouselLabel={"projects"} projects={[
-                    {name: "Spotify DW Saver", href: "/spotify", imgSrc: meNKit},
-                    {name: "Calculatorinator", href: "/calculatorinator", imgSrc: bee},
-                    {name: "Penguin Labyrinth", href: "/mazeGame", imgSrc: beeStock},
-                    {name: "Buttons", href: "/dissectButtons", imgSrc: bumbleBee},
+                    {name: "Spotify DW Saver", href: "/spotify", imgSrc: spotifyApp},
+                    {name: "Calculatorinator", href: "/calculatorinator", imgSrc: calculator},
+                    {name: "Penguin Labyrinth", href: "/mazeGame", imgSrc: mazegame},
+                    // {name: "Buttons", href: "/dissectButtons", imgSrc: bumbleBee},
                 ]}/>
             </section>
         </div>

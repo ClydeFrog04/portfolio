@@ -100,6 +100,7 @@
 .carousel .slide[data-active=true] {
   opacity: 1;
   transform: scale(1);
+  z-index: 1;
 }
 
 /*# sourceMappingURL=Carousel.css.map */

@@ -40,7 +40,9 @@ const Carousel = (props: CarouselProps) => {
             <button className="next" onClick={() => dispatch({type: "INCREMENT"})}>&#8658;</button>
             <ul>
                 {props.projects.map((project, index) => {
+                    console.log("project from loop:", project.name, project.href);
                     return <li key={index} className="slide" data-active={activeProject === index} onClick={ (event) => {
+                        console.log("project was:", project.name, project.href);
                         navigate(project.href);
                     }}>
                         <img src={project.imgSrc} alt=""/>
