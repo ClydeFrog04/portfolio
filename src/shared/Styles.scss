@@ -1,5 +1,5 @@
-@use "variables" as *;
-@use "Colors" as *;
+@use "variables.scss" as *;
+@use "Colors.scss" as *;
 
 .rightAlign{
     text-align: right;
