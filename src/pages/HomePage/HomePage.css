@@ -50,8 +50,6 @@
 .homePage {
   display: flex;
   flex-direction: column;
-  align-self: flex-start;
-  justify-self: flex-start;
   width: 100vw;
   width: 100dvw;
   top: 0;
@@ -101,8 +99,28 @@
 .homePage .projects .info {
   width: 71%;
 }
-.homePage .projects .carousel {
-  flex-basis: 100%;
+@media (width <= 480px) {
+  .homePage {
+    padding: 3rem 0;
+  }
+  .homePage .quickAbout {
+    flex-direction: column;
+  }
+  .homePage .longAbout {
+    flex-direction: column;
+    align-items: center;
+  }
+  .homePage .longAbout .info {
+    width: 100%;
+  }
+  .homePage .projects .info {
+    width: 100%;
+    text-align: center;
+  }
+  .homePage section {
+    padding: 0 1rem;
+    font-size: 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=HomePage.css.map */

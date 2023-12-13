@@ -55,15 +55,7 @@
   flex-direction: column;
   color: white;
   box-sizing: border-box;
-  overflow-x: hidden;
   scroll-behavior: smooth;
-}
-.App .content {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  display: none;
 }
 .App .dissectPage {
   display: flex;

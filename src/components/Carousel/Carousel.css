@@ -102,5 +102,11 @@
   transform: scale(1);
   z-index: 1;
 }
+@media (width < 480px) {
+  .carousel .slide > img {
+    object-fit: scale-down;
+    overflow: visible;
+  }
+}
 
 /*# sourceMappingURL=Carousel.css.map */
