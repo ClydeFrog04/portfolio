@@ -10,25 +10,50 @@
 
     width: 100vw;
     height: 100vh;
-    display: flex;
+    //display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     //overflow: scroll;
     color: white;
     box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    .content{
+        position: absolute;
+        //top: var(--nav-bar-height);
+        //height: calc(100vh - var(--nav-bar-height));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+
+    .dissectPage {
+        //--nav-bar-height
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        //height: calc(100vh - var(--nav-bar-height));
+        height: 50%;
+        position: absolute;
+        top: var(--nav-bar-height);
+        //padding-bottom: 10rem;
+    }
 
 
     //top: 0;
     //left: 0;
 
-    .beeIcon{
+    .beeIcon {
         position: absolute;
         top: .1rem;
         left: .5rem;
         width: 3rem;
 
-        &:hover{
+        &:hover {
             cursor: pointer;
         }
     }
@@ -40,17 +65,19 @@
         align-items: center;
         justify-content: center;
     }
-    .spotifyContainer{
+
+    .spotifyContainer {
         width: 100vw;
         position: absolute;
-        top: 0;
+        top: var(--nav-bar-height);
         left: 0;
         padding: 1rem 0;
         box-sizing: border-box;
 
     }
 
-    .homeWrapper{
+
+    .homeWrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -58,8 +85,9 @@
         text-align: center;
         gap: 1rem;
         padding: 1rem;
+        width: 100vw;
 
-        .typeWriter{
+        .typeWriter {
             margin-bottom: 1rem;
         }
     }

@@ -1,0 +1,75 @@
+@use "../../shared/Styles" as *;
+@use "../../shared/Colors" as *;
+@use "../../shared/Variables" as *;
+
+.carousel{
+    *, *::before, *::after{
+        box-sizing: border-box;
+    }
+
+    width: 100vw;
+    height: 500px;//todo: make better
+
+    position: relative;
+
+    button{
+        position: absolute;
+        //background: none;
+        border: none;
+        font-size: 4rem;
+        top: 50%;
+        z-index: 2;
+        transform: translateY(-50%);
+        color: rgba(255, 255, 255, .5);
+        cursor: pointer;
+        border-radius: .25rem;
+        padding: 0 .5rem;
+        background-color: rgba(0, 0, 0, .1);
+
+        &:hover, &:focus{
+            color: white;
+            background-color: rgba(0, 0, 0, .2);
+        }
+
+        &.prev{
+            left: 1rem;
+        }
+        &.next{
+            right: 1rem;
+        }
+    }
+
+    //ul{propbably already set in reset
+    //    margin: 0;
+    //    padding: 0;
+    //    list-style: none;
+    //}
+
+    .slide{
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transform: scale(.9);
+        overflow: hidden;
+        transition: 200ms all ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        img{
+            //max-height: 100%;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    .slide[data-active=true]{
+        opacity: 1;
+        transform: scale(1);
+        z-index: 1;
+        //border: 1px solid rebeccapurple;
+    }
+}

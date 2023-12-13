@@ -1,0 +1,106 @@
+.rightAlign {
+  text-align: right;
+}
+
+.leftAlign {
+  text-align: left;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.fadeOut {
+  animation: fadeout 0.5s forwards;
+}
+
+.fadeIn {
+  animation: fadein 0.5s forwards;
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.75rem;
+  }
+}
+.carousel {
+  width: 100vw;
+  height: 500px;
+  position: relative;
+}
+.carousel *, .carousel *::before, .carousel *::after {
+  box-sizing: border-box;
+}
+.carousel button {
+  position: absolute;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+  z-index: 2;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.carousel button:hover, .carousel button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.carousel button.prev {
+  left: 1rem;
+}
+.carousel button.next {
+  right: 1rem;
+}
+.carousel .slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(0.9);
+  overflow: hidden;
+  transition: 200ms all ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.carousel .slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.carousel .slide[data-active=true] {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+
+/*# sourceMappingURL=Carousel.css.map */

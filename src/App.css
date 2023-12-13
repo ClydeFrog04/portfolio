@@ -50,12 +50,29 @@
 .App {
   width: 100vw;
   height: 100vh;
-  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   color: white;
   box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.App .content {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.App .dissectPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 50%;
+  position: absolute;
+  top: var(--nav-bar-height);
 }
 .App .beeIcon {
   position: absolute;
@@ -76,7 +93,7 @@
 .App .spotifyContainer {
   width: 100vw;
   position: absolute;
-  top: 0;
+  top: var(--nav-bar-height);
   left: 0;
   padding: 1rem 0;
   box-sizing: border-box;
@@ -89,6 +106,7 @@
   text-align: center;
   gap: 1rem;
   padding: 1rem;
+  width: 100vw;
 }
 .App .homeWrapper .typeWriter {
   margin-bottom: 1rem;

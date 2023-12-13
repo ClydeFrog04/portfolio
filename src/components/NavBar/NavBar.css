@@ -1,0 +1,79 @@
+.rightAlign {
+  text-align: right;
+}
+
+.leftAlign {
+  text-align: left;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.fadeOut {
+  animation: fadeout 0.5s forwards;
+}
+
+.fadeIn {
+  animation: fadein 0.5s forwards;
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.75rem;
+  }
+}
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  width: 100dvw;
+  padding: 5rem;
+}
+.navBar .beeIcon {
+  position: unset;
+}
+.navBar a:not(.name) {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.navBar a:not(.name):hover {
+  font-size: 1.3rem;
+}
+.navBar .name {
+  font-size: 2.15rem;
+  flex-grow: 1;
+}
+.navBar section {
+  font-size: 1rem;
+  display: flex;
+  gap: 1rem;
+  margin: 0 0.5rem;
+}
+
+/*# sourceMappingURL=NavBar.css.map */

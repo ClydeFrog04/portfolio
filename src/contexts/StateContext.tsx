@@ -9,22 +9,23 @@ import React, {createContext, Dispatch, JSX, PropsWithChildren, SetStateAction, 
 //define our default state
 const defaultState = {
     name: "",
-    setName: () => {}
+    navBarHeight: 0
 };
 
 interface IState {
     name: string;
     setName: Dispatch<SetStateAction<string>>;
+    navBarHeight: number;
+    setNavBarHeight: Dispatch<SetStateAction<number>>;
 }
 
 //the actual context object
-export const StateContext = createContext<IState>(defaultState);
+export const StateContext = createContext<IState>(defaultState as IState);
 
 //and finally the provider for the context
-export const StateContextProvider: React.FC<JSX.Element> = (props: PropsWithChildren<React.ReactNode>) =>{
+export const StateContextProvider: React.FC<JSX.Element> = (props: PropsWithChildren<React.ReactNode>) => {
     const [name, setName] = useState(defaultState.name);
-
-
+    const [navBarHeight, setNavBarHeight] = useState(defaultState.navBarHeight);
 
 
 
@@ -32,10 +33,12 @@ export const StateContextProvider: React.FC<JSX.Element> = (props: PropsWithChil
         <StateContext.Provider
             value={{
                 name,
-                setName
+                setName,
+                navBarHeight,
+                setNavBarHeight
 
             }}>
             {props.children}
         </StateContext.Provider>
     );
-}
+};

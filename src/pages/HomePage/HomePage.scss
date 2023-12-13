@@ -1,0 +1,87 @@
+@use "../../shared/Styles" as *;
+@use "../../shared/Colors" as *;
+@use "../../shared/Variables" as *;
+
+
+.homePage{
+    //@include flexCenterColumn();
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    justify-self: flex-start;
+    width: 100vw;
+    width: 100dvw;
+    //position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    max-width: 100vw;
+    color: white;
+    padding-bottom: 3rem;
+    //overflow: hidden;
+    //margin-top: calc(100px + 2.5rem);
+    //box-sizing: border-box;
+    //margin-top: 100px;
+
+    img{
+        //max-width: 500px;
+        max-width: 50%;
+    }
+    h3{
+        font-style: italic;
+        font-size: 1.7rem;
+        width: 25%;
+        text-align: right;
+    }
+
+    section{
+    //.quickAbout, .longAbout{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        padding: 0 5rem;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .quickAbout{
+        //width: 100%;
+        //display flex set above!
+
+
+        .infoContainer{
+            h2{
+                font-size: 3rem;
+                margin-bottom: 1rem;
+                font-style: italic;
+            }
+        }
+    }
+    .longAbout{
+        align-items: flex-start;
+
+        .info{
+            width: 75%;
+        }
+        a{
+            color: white;
+            font-style: italic;
+        }
+    }
+
+    .projects{
+        align-items: flex-start;
+        flex-wrap: wrap;
+        //h3{
+        //    width: 25%;
+        //    text-align: right;
+        //}
+        .info{
+            width: 71%;
+        }
+        .carousel{
+            flex-basis: 100%;
+        }
+    }
+}
