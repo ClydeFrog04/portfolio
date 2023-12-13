@@ -3,11 +3,7 @@
     "target": "ESNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
-    "types": ["node"],
     "skipLibCheck": true,
-    "typeRoots": [
-      "node_modules/@types"
-    ],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
