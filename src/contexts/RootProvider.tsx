@@ -11,7 +11,7 @@
  */
 import React, {JSX, PropsWithChildren} from "react";
 import {StateContextProvider} from "./StateContext";
-
+import {StateContextProvider as SDContextProvider} from "@portfolio-monorepo/sourdough-calculator/src/contexts/StateContext.tsx";
 
 const combineContexts =  (...contexts: React.FC<JSX.Element>[]) => {
     return contexts.reduce(
@@ -30,6 +30,7 @@ const combineContexts =  (...contexts: React.FC<JSX.Element>[]) => {
 
 const providers = [
     StateContextProvider,
+    SDContextProvider
 ]
 
 export const RootProvider = combineContexts(...providers);
