@@ -13,6 +13,7 @@ import NavBar from "./components/NavBar/NavBar.tsx";
 import {StateContext} from "./contexts/StateContext.tsx";
 import SourdoughCalcPage
     from "@portfolio-monorepo/sourdough-calculator/src/pages/SourdoughCalcPage/SourdoughCalcPage.tsx";
+import Board from "@portfolio-monorepo/react-tac-toe/src/Board.tsx";
 
 function App() {
     const navigate = useNavigate();
@@ -116,9 +117,23 @@ function App() {
                 <Route
                     path={"sourdough"}
                     element={
-                        <div className="sourdoughContainer">
-                            <SourdoughCalcPage/>
-                        </div>
+                        <>
+                            <NavBar/>
+                            <div className="sourdoughContainer">
+                                <SourdoughCalcPage/>
+                            </div>
+                        </>
+                    }
+                />
+                <Route
+                    path={"reacttactoe"}
+                    element={
+                        <>
+                            <NavBar/>
+                            <div className="reactTacToeContainer">
+                                <Board/>
+                            </div>
+                        </>
                     }
                 />
                 <Route
