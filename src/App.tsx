@@ -11,6 +11,8 @@ import React, {useContext} from "react";
 import HomePage from "./pages/HomePage/HomePage.tsx";
 import NavBar from "./components/NavBar/NavBar.tsx";
 import {StateContext} from "./contexts/StateContext.tsx";
+import SourdoughCalcPage
+    from "@portfolio-monorepo/sourdough-calculator/src/pages/SourdoughCalcPage/SourdoughCalcPage.tsx";
 
 function App() {
     const navigate = useNavigate();
@@ -108,6 +110,14 @@ function App() {
                     element={
                         <div className="calculatorinatorContainer">
                             <Calculatorinator navigate={navigate}/>
+                        </div>
+                    }
+                />
+                <Route
+                    path={"sourdough"}
+                    element={
+                        <div className="sourdoughContainer">
+                            <SourdoughCalcPage/>
                         </div>
                     }
                 />
