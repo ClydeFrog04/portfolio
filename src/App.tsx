@@ -83,6 +83,9 @@ function App() {
                                 <Button text={"Penguin Labyrinth"} onClick={(e) => {
                                     navigate("/mazeGame");
                                 }}/>
+                                <Button text={"React-Tac-Toe"} onClick={(e) => {
+                                    navigate("/reacttactoe");
+                                }}/>
                                 {/*<Button text={"About Me!"} onClick={(e) => {*/}
                                 {/*    navigate("/aboutMe");*/}
                                 {/*}}/>*/}
