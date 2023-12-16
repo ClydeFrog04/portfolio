@@ -7,7 +7,7 @@
 
 .aboutMe{
     @include flexCenterColumn();
-    @include fitContainer();
+    //@include fitContainer();
     text-align: center;
     gap: 1rem;
 

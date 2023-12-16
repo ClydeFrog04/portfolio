@@ -153,7 +153,10 @@ function App() {
                 <Route
                     path={"aboutMe"}
                     element={
+                    <>
+                        <NavBar/>
                         <AboutMe/>
+                    </>
                     }
                 />
                 <Route
