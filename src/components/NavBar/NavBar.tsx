@@ -53,13 +53,13 @@ const NavBar = (props: NavBarProps) =>{
                 <NavLink to={"/"}>Contact</NavLink>
             </section>
             <section className="socials">
-                <NavLink to={"https://www.github.com/clydefrog04"} target={"_blank"}>
+                <NavLink className="socialIcon" to={"https://www.github.com/clydefrog04"} target={"_blank"}>
                     <i className="fa fa-github"/>
                 </NavLink>
-                <NavLink to={"/"}>
+                <NavLink className="socialIcon" to={"/"}>
                     <i className="fa fa-linkedin"/>
                 </NavLink>
-                <NavLink to={"/oldHome"}>All Projects List</NavLink>
+                <NavLink id="allProjects" to={"/oldHome"}>All Projects List</NavLink>
                 {/*<a href="https://www.github.com/clydefrog04" target="_blank">*/}
                 {/*    <i className="fa fa-github"/>*/}
                 {/*</a>*/}
