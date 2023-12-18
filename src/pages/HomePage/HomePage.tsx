@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./HomePage.css";
 import NavBar from "../../components/NavBar/NavBar.tsx";
 import meNKit from "../../../res/MeNKit.jpg";
@@ -9,15 +9,29 @@ import spotifyApp from "../../../res/spotifyApp.png";
 import calculator from "../../../res/calculator.png";
 import mazegame from "../../../res/mazegame.png";
 import bumbleBee from "../../../res/bumbleBee.png";
-import {NavLink} from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
 import Carousel from "../../components/Carousel/Carousel.tsx";
 
 interface HomePageProps {
 
 }
 
-const HomePage = (props: HomePageProps) =>{
+const HomePage = (props: HomePageProps) => {
     const TAG = "[HomePage.tsx]";
+    const location = useLocation();
+
+
+    useEffect(() => {
+        //thank you: https://stackoverflow.com/questions/61779236/how-to-navigate-to-another-page-with-a-smooth-scroll-on-a-specific-id-with-react
+        if (location.hash) {
+            const elem = document.getElementById(location.hash.slice(1));
+            if (elem) {
+                elem.scrollIntoView({behavior: "smooth"});
+            }
+        } else {
+            window.scrollTo({top: 0, left: 0, behavior: "smooth"});
+        }
+    }, [location]);
 
 
     return (
@@ -36,29 +50,38 @@ const HomePage = (props: HomePageProps) =>{
                     {/*    I'm always looking to learn something new, and constantly growing my skill-set!*/}
                     {/*</p>*/}
                     <p className="info">
-                        I'm a software developer based in Colorado with a diverse background in working on various projects using different technologies
+                        I'm a software developer based in Colorado with a diverse background in working on various
+                        projects using different technologies
                         such as Android, embedded C, and React with TypeScript. <br/><br/>
-                        I have a passion for learning and am always on the lookout for new challenges to further expand my skill set!
+                        I have a passion for learning and am always on the lookout for new challenges to further expand
+                        my skill set!
                         The journey of constant growth and improvement is what excites me the most in my career!
                     </p>
                 </div>
             </section>
-            <section className="longAbout">
+            <section id="about" className="longAbout">
                 {/*<section className="infoContainer">*/}
-                    <h3>About</h3>
-                    <p className="info">
-                        Throughout my career, I've been enthusiastic about driving change through and building cool things.
-                        One of my biggest achievements was rebuilding a major part of an outdated UI using modern technologies like react,
-                        typescript and android systems! Projects like these are always a fun challenge that showcase my ability to create and learn new things.
-                        <br/><br/>
-                        I got my start as a developer by writing TI basic code on my graphing calculators when I was in school.
-                        I fell in love with the trial and error process of code, especially in relation to learning a language that is new to me.
-                        After teaching myself how to build small basic applications on my calculators, I went on to learn other aspects of programming,
-                        including game design. <NavLink to={"/mazeGame"}>You can play one of my first game projects here!</NavLink> This one was a fun challenge in designing my own algorithms,
-                        this one being a procedural maze generation algorithm!
-                        <br/><br/>
-                        Beyond coding, I love spending time on other various hobbies including baking, rock climbing, and listening to and playing music!
-                    </p>
+                <h3>About</h3>
+                <p className="info">
+                    Throughout my career, I've been enthusiastic about driving change through and building cool things.
+                    One of my biggest achievements was rebuilding a major part of an outdated UI using modern
+                    technologies like react,
+                    typescript and android systems! Projects like these are always a fun challenge that showcase my
+                    ability to create and learn new things.
+                    <br/><br/>
+                    I got my start as a developer by writing TI basic code on my graphing calculators when I was in
+                    school.
+                    I fell in love with the trial and error process of code, especially in relation to learning a
+                    language that is new to me.
+                    After teaching myself how to build small basic applications on my calculators, I went on to learn
+                    other aspects of programming,
+                    including game design. <NavLink to={"/mazeGame"}>You can play one of my first game projects
+                    here!</NavLink> This one was a fun challenge in designing my own algorithms,
+                    this one being a procedural maze generation algorithm!
+                    <br/><br/>
+                    Beyond coding, I love spending time on other various hobbies including baking, rock climbing, and
+                    listening to and playing music!
+                </p>
                 {/*</section>*/}
             </section>
             <section className="projects" id="projects">
@@ -73,6 +96,6 @@ const HomePage = (props: HomePageProps) =>{
             </section>
         </div>
     );
-}
+};
 
 export default HomePage;
