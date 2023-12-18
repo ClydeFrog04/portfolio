@@ -46,9 +46,8 @@ const NavBar = (props: NavBarProps) =>{
     const sections =(
         <>
             <section className="navLinks">
-                <NavLink to={"/aboutMe"}>About Me</NavLink>
-                {/*<Link to={"/#projects"}>Projects</Link>*/}
-                <a href={"/#projects"}>Projects</a>
+                <NavLink to={"/#about"}>About Me</NavLink>
+                <NavLink to={"/#projects"}>Projects</NavLink>
                 <NavLink to={"/"}>Resume</NavLink>
                 <NavLink to={"/"}>Contact</NavLink>
             </section>
