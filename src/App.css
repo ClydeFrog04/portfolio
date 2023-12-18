@@ -90,6 +90,13 @@
   padding: 1rem 0;
   box-sizing: border-box;
 }
+.App .sourdoughContainer {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 .App .homeWrapper {
   display: flex;
   flex-direction: column;
