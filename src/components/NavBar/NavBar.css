@@ -61,11 +61,27 @@
 .navBar a:not(.name) {
   cursor: pointer;
   font-size: 1.2rem;
+  position: relative;
 }
-.navBar a:not(.name):hover {
-  font-size: 1.3rem;
-  margin-left: -5px;
-  margin-top: -2px;
+.navBar a:not(.name)::after {
+  content: "";
+  border-bottom: 4px solid green;
+  width: 100%;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 150ms ease-in-out;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  transition-duration: 450ms;
+  transition-delay: 0.1s;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.navBar a:not(.name):hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 .navBar .name {
   font-size: 2.15rem;
