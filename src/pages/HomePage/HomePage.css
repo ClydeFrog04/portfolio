@@ -96,7 +96,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
   transition: all;
-  transition-duration: 2s;
+  transition-duration: 500ms;
   transform-origin: top;
 }
 .homePage .projects .info {
