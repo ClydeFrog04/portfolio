@@ -102,13 +102,17 @@
 .homePage .projects .info {
   width: 71%;
 }
+.homePage .projects.notVisible {
+  transform: scaleY(0);
+  opacity: 0;
+}
 .homePage #about {
   transition: all;
-  transition-duration: 2s;
-  transform-origin: top;
+  transition-duration: 500ms;
+  transform-origin: left;
 }
-.homePage .notVisible {
-  transform: scaleY(0);
+.homePage #about.notVisible {
+  transform: scaleX(0);
   opacity: 0;
 }
 @media (width <= 480px) {

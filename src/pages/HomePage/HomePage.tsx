@@ -1,19 +1,12 @@
 import React, {useEffect, useRef} from "react";
 import "./HomePage.css";
-import NavBar from "../../components/NavBar/NavBar.tsx";
 import meNKit from "../../../res/MeNKit.jpg";
-// import bee from "../../../res/TransbeeIconMedium.png";
-// import beeStock from "../../../res/beeStockPhoto.jpg";
-// import bumbleBee from "../../../res/bumbleBee.png";
 import spotifyApp from "../../../res/spotifyApp.png";
 import calculator from "../../../res/calculator.png";
 import mazegame from "../../../res/mazegame.png";
-import bumbleBee from "../../../res/bumbleBee.png";
 import {NavLink, useLocation} from "react-router-dom";
 import Carousel from "../../components/Carousel/Carousel.tsx";
-import {removeClassOnVisible, toggleClassOnVisible} from "../../utils/scrollUtils.ts";
-
-// import {debounce, storeScroll} from "../../utils/scrollUtils.ts";
+import {removeClassOnVisible} from "../../utils/scrollUtils.ts";
 
 interface HomePageProps {
 
@@ -45,9 +38,8 @@ const HomePage = (props: HomePageProps) => {
         const projectsSection = (projectsRef.current! as HTMLElement);
         const carouselSection = (carouselRef.current! as HTMLElement);
         console.log("types", projectsSection, carouselSection);
-        toggleClassOnVisible(aboutSection, "notVisible");
+        removeClassOnVisible(aboutSection, "notVisible");
         removeClassOnVisible(projectsSection, "notVisible");
-        // removeClassOnVisible(carouselSection, "notVisible");
 
         return () => {
             clearTimeout(toggleClassTimer.current);

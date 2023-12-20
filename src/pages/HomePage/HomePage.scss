@@ -3,7 +3,7 @@
 @use "../../shared/Variables" as *;
 
 
-.homePage{
+.homePage {
     //@include flexCenterColumn();
     display: flex;
     flex-direction: column;
@@ -23,19 +23,20 @@
     //box-sizing: border-box;
     //margin-top: 100px;
 
-    img{
+    img {
         //max-width: 500px;
         max-width: 50%;
     }
-    h3{
+
+    h3 {
         font-style: italic;
         font-size: 1.7rem;
         width: 25%;
         text-align: right;
     }
 
-    section{
-    //.quickAbout, .longAbout{
+    section {
+        //.quickAbout, .longAbout{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -45,58 +46,67 @@
         margin-bottom: 2rem;
     }
 
-    .quickAbout{
+    .quickAbout {
         //width: 100%;
         //display flex set above!
 
 
-        .infoContainer{
-            h2{
+        .infoContainer {
+            h2 {
                 font-size: 3rem;
                 margin-bottom: 1rem;
                 font-style: italic;
             }
         }
     }
-    .longAbout{
+
+    .longAbout {
         align-items: flex-start;
 
-        .info{
+        .info {
             width: 75%;
         }
-        a{
+
+        a {
             color: white;
             font-style: italic;
         }
     }
 
-    .projects{
+    .projects {
         align-items: flex-start;
         flex-wrap: wrap;
         //h3{
         //    width: 25%;
         //    text-align: right;
         //}
-        .info{
+        .info {
             width: 71%;
         }
+
         transition: all;
         //transition-duration: 250ms;
         transition-duration: 2s;
         transform-origin: top;
 
         &.notVisible{
-
+            transform: scaleY(0);
+            opacity: 0;
         }
     }
 
-    #about{
+    #about {
         transition: all;
-        //transition-duration: 250ms;
-        transition-duration: 2s;
-        transform-origin: top;
+        transition-duration: 500ms;
+        //transition-duration: 2s;
+        transform-origin: left;
         //transform: scaleY(1);
         //opacity: 1;
+
+        &.notVisible {
+            transform: scaleX(0);
+            opacity: 0;
+        }
     }
 
     //.carousel{
@@ -106,33 +116,34 @@
     //    }
     //}
 
-    .notVisible{
-        transform: scaleY(0);
-        opacity: 0;
-    }
+    //.notVisible{
+    //    transform: scale(0, 0);
+    //    opacity: 0;
+    //}
 
     @media (width <= $breakpointMobile) {
         padding: 3rem 0;
 
-        .quickAbout{
+        .quickAbout {
             flex-direction: column;
         }
-        .longAbout{
+        .longAbout {
             flex-direction: column;
             align-items: center;
-            .info{
+
+            .info {
                 width: 100%;
             }
         }
 
-        .projects{
-            .info{
+        .projects {
+            .info {
                 width: 100%;
                 text-align: center;
             }
         }
 
-        section{
+        section {
             padding: 0 1rem;
             font-size: 1.5rem;
         }
