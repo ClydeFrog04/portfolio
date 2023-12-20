@@ -1,16 +1,12 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useRef} from "react";
 import "./HomePage.css";
-import NavBar from "../../components/NavBar/NavBar.tsx";
 import meNKit from "../../../res/MeNKit.jpg";
-// import bee from "../../../res/TransbeeIconMedium.png";
-// import beeStock from "../../../res/beeStockPhoto.jpg";
-// import bumbleBee from "../../../res/bumbleBee.png";
 import spotifyApp from "../../../res/spotifyApp.png";
 import calculator from "../../../res/calculator.png";
 import mazegame from "../../../res/mazegame.png";
-import bumbleBee from "../../../res/bumbleBee.png";
 import {NavLink, useLocation} from "react-router-dom";
 import Carousel from "../../components/Carousel/Carousel.tsx";
+import {removeClassOnVisible} from "../../utils/scrollUtils.ts";
 
 interface HomePageProps {
 
@@ -19,6 +15,10 @@ interface HomePageProps {
 const HomePage = (props: HomePageProps) => {
     const TAG = "[HomePage.tsx]";
     const location = useLocation();
+    const aboutRef = useRef(null);
+    const projectsRef = useRef(null);
+    const carouselRef = useRef(null);
+    const toggleClassTimer = useRef<NodeJS.Timer>();
 
 
     useEffect(() => {
@@ -32,6 +32,19 @@ const HomePage = (props: HomePageProps) => {
             window.scrollTo({top: 0, left: 0, behavior: "smooth"});
         }
     }, [location]);
+
+    useEffect(() => {
+        const aboutSection = (aboutRef.current! as HTMLElement);
+        const projectsSection = (projectsRef.current! as HTMLElement);
+        const carouselSection = (carouselRef.current! as HTMLElement);
+        console.log("types", projectsSection, carouselSection);
+        removeClassOnVisible(aboutSection, "notVisible");
+        removeClassOnVisible(projectsSection, "notVisible");
+
+        return () => {
+            clearTimeout(toggleClassTimer.current);
+        };
+    }, []);
 
 
     return (
@@ -59,7 +72,7 @@ const HomePage = (props: HomePageProps) => {
                     </p>
                 </div>
             </section>
-            <section id="about" className="longAbout">
+            <section ref={aboutRef} id="about" className="longAbout notVisible">
                 {/*<section className="infoContainer">*/}
                 <h3>About</h3>
                 <p className="info">
@@ -84,10 +97,10 @@ const HomePage = (props: HomePageProps) => {
                 </p>
                 {/*</section>*/}
             </section>
-            <section className="projects" id="projects">
+            <section ref={projectsRef} className="projects notVisible" id="projects">
                 <h3>Projects</h3>
                 <p className="info">Wanna check out some of my projects?</p>
-                <Carousel carouselLabel={"projects"} projects={[
+                <Carousel ref={carouselRef}  carouselLabel={"projects"} projects={[
                     {name: "Spotify DW Saver", href: "/spotify", imgSrc: spotifyApp},
                     {name: "Calculatorinator", href: "/calculatorinator", imgSrc: calculator},
                     {name: "Penguin Labyrinth", href: "/mazeGame", imgSrc: mazegame},

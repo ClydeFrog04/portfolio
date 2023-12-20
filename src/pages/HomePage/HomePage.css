@@ -95,9 +95,25 @@
 .homePage .projects {
   align-items: flex-start;
   flex-wrap: wrap;
+  transition: all;
+  transition-duration: 500ms;
+  transform-origin: top;
 }
 .homePage .projects .info {
   width: 71%;
+}
+.homePage .projects.notVisible {
+  transform: scaleY(0);
+  opacity: 0;
+}
+.homePage #about {
+  transition: all;
+  transition-duration: 500ms;
+  transform-origin: left;
+}
+.homePage #about.notVisible {
+  transform: scaleX(0);
+  opacity: 0;
 }
 @media (width <= 480px) {
   .homePage {
