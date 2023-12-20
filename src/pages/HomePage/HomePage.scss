@@ -80,9 +80,35 @@
         .info{
             width: 71%;
         }
-        //.carousel{
-        //    //flex-basis: 100%;
-        //}
+        transition: all;
+        //transition-duration: 250ms;
+        transition-duration: 2s;
+        transform-origin: top;
+
+        &.notVisible{
+
+        }
+    }
+
+    #about{
+        transition: all;
+        //transition-duration: 250ms;
+        transition-duration: 2s;
+        transform-origin: top;
+        //transform: scaleY(1);
+        //opacity: 1;
+    }
+
+    //.carousel{
+    //    &.notVisible{
+    //        transform: scaleY(1);
+    //        opacity: 1;
+    //    }
+    //}
+
+    .notVisible{
+        transform: scaleY(0);
+        opacity: 0;
     }
 
     @media (width <= $breakpointMobile) {

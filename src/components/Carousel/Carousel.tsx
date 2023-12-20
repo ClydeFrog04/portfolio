@@ -1,4 +1,4 @@
-import React, {HTMLAttributes, useEffect, useReducer, useState} from "react";
+import React, {forwardRef, HTMLAttributes, useEffect, useReducer, useState} from "react";
 import "./Carousel.css";
 import {Project} from "../../utils/typeDefs.ts";
 import {useNavigate} from "react-router-dom";
@@ -6,9 +6,12 @@ import {useNavigate} from "react-router-dom";
 type CarouselProps = {//alt+4 let go :p
     carouselLabel: string;
     projects: Project[];
+    classes?: string[];
+    // ref?: React.Ref<HTMLDivElement>;
 } & HTMLAttributes<HTMLDivElement>;
 
-const Carousel = (props: CarouselProps) => {
+// const Carousel = forwardRef(function Carousel(props: CarouselProps, ref) => {
+const Carousel = forwardRef(function Carousel(props: CarouselProps, ref: React.Ref<HTMLDivElement>){
     const TAG = "[Carousel.tsx]";
     const navigate = useNavigate();
 
@@ -35,7 +38,7 @@ const Carousel = (props: CarouselProps) => {
 
 
     return (
-        <div className="carousel" aria-label={`carousel-of-${props.carouselLabel}`}>
+        <div ref={ref} className={`carousel ${props.classes?.join(" ")}`.trimEnd()} aria-label={`carousel-of-${props.carouselLabel}`}>
             <button className="prev" onClick={() => dispatch({type: "DECREMENT"})}>&#8656;</button>
             <button className="next" onClick={() => dispatch({type: "INCREMENT"})}>&#8658;</button>
             <ul>
@@ -51,6 +54,6 @@ const Carousel = (props: CarouselProps) => {
             </ul>
         </div>
     );
-};
+});
 
 export default Carousel;
