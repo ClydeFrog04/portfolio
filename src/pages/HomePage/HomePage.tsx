@@ -18,7 +18,6 @@ const HomePage = (props: HomePageProps) => {
     const aboutRef = useRef(null);
     const projectsRef = useRef(null);
     const carouselRef = useRef(null);
-    const toggleClassTimer = useRef<NodeJS.Timer>();
 
 
     useEffect(() => {
@@ -40,10 +39,6 @@ const HomePage = (props: HomePageProps) => {
         console.log("types", projectsSection, carouselSection);
         removeClassOnVisible(aboutSection, "notVisible");
         removeClassOnVisible(projectsSection, "notVisible");
-
-        return () => {
-            clearTimeout(toggleClassTimer.current);
-        };
     }, []);
 
 
