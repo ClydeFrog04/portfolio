@@ -67,13 +67,13 @@ const NavBar = (props: NavBarProps) =>{
     )
 
     const desktop =(
-        <header className="navBar" ref={navBarRef}>
+        <nav className="navBar" ref={navBarRef}>
             {/*<img className={"beeIcon"} src={beeIcon} onClick={ () => {*/}
             {/*    navigate("/");*/}
             {/*}} alt="an icon that is also a bee buzzzzzz"/>*/}
             <NavLink to={"/"} className={"name"}>Randi Egan</NavLink>
             {sections}
-        </header>
+        </nav>
     )
 
     const mobile = (

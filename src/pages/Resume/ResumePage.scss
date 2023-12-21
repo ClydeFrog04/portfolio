@@ -4,4 +4,25 @@
 
 .resumePage{
 
+    header{
+        font-size: 5rem;
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .info{
+            width: 75%;
+        }
+
+        #headshot{
+            //max-width: 200px;
+            //max-height: 200px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
 }

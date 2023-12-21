@@ -31,3 +31,7 @@ body {
     //min-width: 320px;
     //min-height: 100vh;
 }
+
+strong{
+    font-weight: bold;//value gets reset and adding this to the css reset is not working idk why
+}

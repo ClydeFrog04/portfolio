@@ -5,12 +5,13 @@
 .starSeparator {
     width: 100%;
     position: relative;
-    margin-bottom: 3rem;
+    margin: 3rem 0;
 
 
     &::before {
         content: ' ';
-        border-bottom: 2px solid white;
+        border-bottom: 2px solid #a4a4a4;
+        //border-bottom: 2px solid #868686;
         width: 100%;
         display: block;
     }
@@ -19,6 +20,7 @@
         content: "\2726";
         font-size: 4rem;
         position: absolute;
+        color: white;
         //left: 75%;
         left: var(--leftPosition);
         top: calc(-2rem + 1.5px);//todo: figure out actual positioning

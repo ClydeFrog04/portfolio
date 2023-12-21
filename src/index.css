@@ -127,4 +127,8 @@ a {
   scroll-behavior: smooth;
 }
 
+strong {
+  font-weight: bold;
+}
+
 /*# sourceMappingURL=index.css.map */
