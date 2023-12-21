@@ -49,3 +49,9 @@ const scrollHelper = (fn: IntersectionObserverCallback, elem: HTMLElement) => {
         console.log("There is no observer available");
     }
 };
+
+export const watchScrollHeight = (elem: HTMLElement) => {
+    scrollHelper( (entries) => {
+        console.log(entries[0].intersectionRect.y);
+    }, elem);
+}

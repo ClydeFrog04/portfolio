@@ -3,7 +3,7 @@
 @use "../../shared/Variables" as *;
 
 .starSeparator {
-    width: 100%;
+    //width: 100%;
     position: relative;
     margin: 3rem 0;
 
@@ -26,10 +26,30 @@
         top: calc(-2rem + 1.5px);//todo: figure out actual positioning
     }
 
+    //&.vertical{
+    //    width: 100%;
+    //    height: var(--verticalHeight);
+    //    //display: block;
+    //    &::before{
+    //        border-bottom: 0;
+    //        border-left: 2px solid #a4a4a4;
+    //        height: 100%;
+    //        position: absolute;
+    //        left: 1.58rem;
+    //    }
+    //
+    //    &::after{
+    //        left: 0;
+    //        top: calc(var(--verticalPosition) - 1.58rem);
+    //
+    //    }
+    //}
+
     &.vertical{
-        width: 0;
-        height: 500px;
+        width: 3.2rem;
+        height: var(--verticalHeight);
         //display: block;
+        margin: 0;
         &::before{
             border-bottom: 0;
             border-left: 2px solid #a4a4a4;
@@ -39,9 +59,11 @@
         }
 
         &::after{
-            left: 0;
+            //left: -0.01rem;
             top: calc(var(--verticalPosition) - 1.58rem);
 
         }
     }
+
+
 }

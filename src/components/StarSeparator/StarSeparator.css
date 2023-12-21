@@ -49,7 +49,6 @@
   }
 }
 .starSeparator {
-  width: 100%;
   position: relative;
   margin: 3rem 0;
 }
@@ -68,8 +67,9 @@
   top: calc(-2rem + 1.5px);
 }
 .starSeparator.vertical {
-  width: 0;
-  height: 500px;
+  width: 3.2rem;
+  height: var(--verticalHeight);
+  margin: 0;
 }
 .starSeparator.vertical::before {
   border-bottom: 0;
@@ -79,7 +79,6 @@
   left: 1.58rem;
 }
 .starSeparator.vertical::after {
-  left: 0;
   top: calc(var(--verticalPosition) - 1.58rem);
 }
 

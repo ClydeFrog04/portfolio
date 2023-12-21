@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .rightAlign {
   text-align: right;
 }
@@ -47,6 +48,10 @@
     font-size: 2.75rem;
   }
 }
+.resumePage h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
 .resumePage header {
   font-size: 5rem;
   padding: 0 2rem;
@@ -63,6 +68,63 @@
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
+}
+.resumePage .content {
+  display: flex;
+  gap: 1rem;
+  width: 100vw;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.resumePage .content .about {
+  flex-basis: calc(40% - 2rem);
+}
+.resumePage .content .about #brief {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #a4a4a4;
+  padding-bottom: 1rem;
+  color: #a4a4a4;
+}
+.resumePage .content .workHistory {
+  flex-basis: 50%;
+}
+.resumePage .content .workHistory H2 {
+  border-bottom: 2px solid #a4a4a4;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+.resumePage .content .workHistorySection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-bottom: 2px solid #a4a4a4;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+.resumePage .content .workHistorySection .title {
+  font-size: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+.resumePage .content .workHistorySection .timeline {
+  color: #a4a4a4;
+}
+.resumePage .content .workHistorySection .bullets {
+  color: #a4a4a4;
+  list-style: none; /* Remove default bullets */
+}
+.resumePage .content .workHistorySection .bullets li {
+  font-size: 1.1rem;
+  margin: 0.3rem;
+}
+.resumePage .content .workHistorySection .bullets li::before {
+  content: "•"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: white; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1rem; /* Also needed for space (tweak if needed) */
+  margin-left: -1rem; /* Also needed for space (tweak if needed) */
 }
 
 /*# sourceMappingURL=ResumePage.css.map */
