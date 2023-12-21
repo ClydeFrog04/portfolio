@@ -42,19 +42,35 @@ const ResumePage = (props: ResumePageProps) => {
 
             <div className="content">
                 <section className="about">
-                    <h2 id="name">
-                        Randi Egan
-                    </h2>
-                    <section id="brief">
-                        Dedicated and results-driven Software Developer with over 3 of experience in designing,
-                        implementing, testing,
-                        and maintaining software solutions. Adept at collaborating with cross-functional teams to drive
-                        project success.
-                        Seeking a challenging role where I can leverage my skills in Javascript/Typescript, React, CSS,
-                        Java/Kotlin, and Android using various
-                        software development tools, contribute to innovative projects, and continue to grow in a dynamic
-                        development environment.
-                    </section>
+                    <div className="meWrapper">
+                        <h2 id="name">
+                            Randi Egan
+                        </h2>
+                        <section id="brief">
+                            Dedicated and results-driven Software Developer with over 3 of experience in designing,
+                            implementing, testing,
+                            and maintaining software solutions. Adept at collaborating with cross-functional teams to drive
+                            project success.
+                            Seeking a challenging role where I can leverage my skills in Javascript/Typescript, React, CSS,
+                            Java/Kotlin, and Android using various
+                            software development tools, contribute to innovative projects, and continue to grow in a dynamic
+                            development environment.
+                        </section>
+                    </div>
+                    <div className="education">
+                        <h2 id="education">Education</h2>
+                        {createWorkExperienceSection(
+                            "Full Stack Web Development & Computer Science",
+                            "Lambda School",
+                            "February 2020 - February 2021",
+                            [
+                                "Studied fundamentals of HTML5, CSS3, responsive design and cross-browser support",
+                                "Learned backend development using node.js with express server",
+                                "Individually learned and utilized typescript for every project as a bonus instead of javascript"
+                            ]
+                        )}
+                    </div>
+
                 </section>
                 <StarSeparator starPosition={20} vertical={true} verticalHeight={1000}/>
                 <section className="workHistory">

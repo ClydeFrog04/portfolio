@@ -85,6 +85,7 @@
   border-bottom: 2px solid #a4a4a4;
   padding-bottom: 1rem;
   color: #a4a4a4;
+  margin-bottom: 1.5rem;
 }
 .resumePage .content .workHistory {
   flex-basis: 50%;
@@ -93,6 +94,9 @@
   border-bottom: 2px solid #a4a4a4;
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
+}
+.resumePage .content .education .workHistorySection .title {
+  flex-direction: column;
 }
 .resumePage .content .workHistorySection {
   display: flex;

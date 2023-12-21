@@ -49,6 +49,7 @@
                 border-bottom: 2px solid $myGrey;
                 padding-bottom: 1rem;
                 color: $myGrey;
+                margin-bottom: 1.5rem;
             }
         }
 
@@ -64,6 +65,14 @@
                 border-bottom: 2px solid $myGrey;
                 padding-bottom: 1rem;
                 margin-bottom: 1.5rem;
+            }
+        }
+
+        .education{
+            .workHistorySection{
+                .title{
+                    flex-direction: column;
+                }
             }
         }
 
