@@ -21,8 +21,12 @@ const ResumePage = (props: ResumePageProps) =>{
                 </span>
                 <img id="headshot" src={headshot} alt="This is a picture of me!"/>
             </header>
-
             <StarSeparator starPosition={33}/>
+
+            <section className="workHistory">
+                <StarSeparator starPosition={50} vertical={true}/>
+            </section>
+
         </div>
     );
 }
