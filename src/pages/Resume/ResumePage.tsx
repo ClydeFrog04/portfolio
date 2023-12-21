@@ -1,9 +1,7 @@
-import React, {useEffect} from "react";
+import React from "react";
 import "./ResumePage.css";
 import headshot from "../../../res/MeNKit.jpg";
-// import headshot from "../../../res/headshot.jpg";
 import StarSeparator from "../../components/StarSeparator/StarSeparator.tsx";
-import {watchScrollHeight} from "../../utils/scrollUtils.ts";
 import NavBar from "../../components/NavBar/NavBar.tsx";
 
 interface ResumePageProps {

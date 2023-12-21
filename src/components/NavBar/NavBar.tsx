@@ -55,7 +55,7 @@ const NavBar = (props: NavBarProps) =>{
                 <NavLink className="socialIcon" to={"https://www.github.com/clydefrog04"} target={"_blank"}>
                     <i className="fa fa-github"/>
                 </NavLink>
-                <NavLink className="socialIcon" to={"/"}>
+                <NavLink className="socialIcon" to={"https://www.linkedin.com/in/randi-egan/"} target={"_blank"}>
                     <i className="fa fa-linkedin"/>
                 </NavLink>
                 <NavLink id="allProjects" to={"/oldHome"}>All Projects List</NavLink>

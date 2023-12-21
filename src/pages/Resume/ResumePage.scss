@@ -22,8 +22,6 @@
         }
 
         #headshot {
-            //max-width: 200px;
-            //max-height: 200px;
             width: 200px;
             height: 200px;
             border-radius: 50%;
@@ -40,7 +38,6 @@
         box-sizing: border-box;
 
         .about {
-            //border: 1px solid green;
             flex-basis: calc(40% - 2rem);
 
             #brief {
@@ -52,13 +49,7 @@
                 margin-bottom: 1.5rem;
             }
         }
-
-        .starSeparator {
-            //border: 1px solid orange;
-        }
-
         .workHistory {
-            //width: 30%;
             flex-basis: 50%;
 
             H2 {
@@ -126,17 +117,9 @@
             position: relative;
             top: -2rem;//shift back up after padding top is applied
         }
-        //.menu{
-        //    position: relative;
-        //    display: none;
-        //}
 
         header {
             font-size: 3rem;
-            img {
-                float: right;
-                shape-outside: ellipse(50%, 50%);
-            }
         }
 
         .workHistorySection{

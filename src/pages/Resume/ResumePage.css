@@ -144,10 +144,6 @@
   .resumePage header {
     font-size: 3rem;
   }
-  .resumePage header img {
-    float: right;
-    shape-outside: ellipse(50%, 50%);
-  }
   .resumePage .workHistorySection .title {
     flex-direction: column;
   }
