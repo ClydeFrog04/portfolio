@@ -116,4 +116,38 @@
             }
         }
     }
+
+    @media (width < $breakpointMobile){
+        padding-top: 2rem;
+        .vertical{
+            display: none;//remove vertical star separator!
+        }
+        .navBar{
+            position: relative;
+            top: -2rem;//shift back up after padding top is applied
+        }
+        //.menu{
+        //    position: relative;
+        //    display: none;
+        //}
+
+        header {
+            font-size: 3rem;
+            img {
+                float: right;
+                shape-outside: ellipse(50%, 50%);
+            }
+        }
+
+        .workHistorySection{
+            .title{
+                flex-direction: column;
+            }
+        }
+
+        .content{
+            flex-direction: column;
+            padding: 0 1rem;
+        }
+    }
 }

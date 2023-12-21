@@ -4,6 +4,7 @@ import headshot from "../../../res/MeNKit.jpg";
 // import headshot from "../../../res/headshot.jpg";
 import StarSeparator from "../../components/StarSeparator/StarSeparator.tsx";
 import {watchScrollHeight} from "../../utils/scrollUtils.ts";
+import NavBar from "../../components/NavBar/NavBar.tsx";
 
 interface ResumePageProps {
 
@@ -31,6 +32,7 @@ const ResumePage = (props: ResumePageProps) => {
 
     return (
         <div className="resumePage">
+            <NavBar/>
             <StarSeparator starPosition={18}/>
             <header>
                 <span className="info">

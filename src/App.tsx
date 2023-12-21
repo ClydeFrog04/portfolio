@@ -167,7 +167,7 @@ function App() {
                     path={"resume"}
                     element={
                         <>
-                            <NavBar/>
+                            {/*<NavBar/>*/}
                             <ResumePage/>
                         </>
                     }

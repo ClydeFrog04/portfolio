@@ -130,5 +130,31 @@
   width: 1rem; /* Also needed for space (tweak if needed) */
   margin-left: -1rem; /* Also needed for space (tweak if needed) */
 }
+@media (width < 480px) {
+  .resumePage {
+    padding-top: 2rem;
+  }
+  .resumePage .vertical {
+    display: none;
+  }
+  .resumePage .navBar {
+    position: relative;
+    top: -2rem;
+  }
+  .resumePage header {
+    font-size: 3rem;
+  }
+  .resumePage header img {
+    float: right;
+    shape-outside: ellipse(50%, 50%);
+  }
+  .resumePage .workHistorySection .title {
+    flex-direction: column;
+  }
+  .resumePage .content {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+}
 
 /*# sourceMappingURL=ResumePage.css.map */
