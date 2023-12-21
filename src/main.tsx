@@ -4,7 +4,7 @@
 import React, {StrictMode} from "react";
 import * as ReactDOMClient from "react-dom/client";
 import App from "./App.tsx";
-import "./index.css";
+import "./index.scss";
 import {RootProvider} from "./contexts/RootProvider.tsx";
 import {BrowserRouter as Router} from "react-router-dom";
 

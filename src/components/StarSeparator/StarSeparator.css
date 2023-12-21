@@ -1,0 +1,85 @@
+@charset "UTF-8";
+.rightAlign {
+  text-align: right;
+}
+
+.leftAlign {
+  text-align: left;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.fadeOut {
+  animation: fadeout 0.5s forwards;
+}
+
+.fadeIn {
+  animation: fadein 0.5s forwards;
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.75rem;
+  }
+}
+.starSeparator {
+  position: relative;
+  margin: 3rem 0;
+}
+.starSeparator::before {
+  content: " ";
+  border-bottom: 2px solid #a4a4a4;
+  width: 100%;
+  display: block;
+}
+.starSeparator::after {
+  content: "✦";
+  font-size: 4rem;
+  position: absolute;
+  color: white;
+  left: var(--leftPosition);
+  top: calc(-2rem + 1.5px);
+}
+.starSeparator.vertical {
+  width: 3.2rem;
+  height: var(--verticalHeight);
+  margin: 0;
+}
+.starSeparator.vertical::before {
+  border-bottom: 0;
+  border-left: 2px solid #a4a4a4;
+  height: 100%;
+  position: absolute;
+  left: 1.58rem;
+}
+.starSeparator.vertical::after {
+  top: calc(var(--verticalPosition) - 1.58rem);
+}
+
+/*# sourceMappingURL=StarSeparator.css.map */

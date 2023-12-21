@@ -1,0 +1,136 @@
+@use "../../shared/Styles" as *;
+@use "../../shared/Colors" as *;
+@use "../../shared/Variables" as *;
+
+.resumePage {
+    $myGrey: #a4a4a4;
+
+    h2 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    header {
+        font-size: 5rem;
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .info {
+            width: 75%;
+        }
+
+        #headshot {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .content {
+        display: flex;
+        gap: 1rem;
+        width: 100vw;
+        justify-content: center;
+        box-sizing: border-box;
+
+        .about {
+            flex-basis: calc(40% - 2rem);
+
+            #brief {
+                margin-top: .5rem;
+                font-size: 1.5rem;
+                border-bottom: 2px solid $myGrey;
+                padding-bottom: 1rem;
+                color: $myGrey;
+                margin-bottom: 1.5rem;
+            }
+        }
+        .workHistory {
+            flex-basis: 50%;
+
+            H2 {
+                border-bottom: 2px solid $myGrey;
+                padding-bottom: 1rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .education{
+            .workHistorySection{
+                .title{
+                    flex-direction: column;
+                }
+            }
+        }
+
+        .workHistorySection {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            border-bottom: 2px solid $myGrey;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+
+            .title {
+                font-size: 2rem;
+                display: flex;
+                gap: 1rem;
+            }
+
+            .timeline {
+                color: $myGrey;
+            }
+
+            .bullets {
+                color: $myGrey;
+
+                li {
+                    font-size: 1.1rem;
+                    margin: .3rem;
+                }
+
+                list-style: none; /* Remove default bullets */
+
+                li::before {
+                    $bulletSpacing: 1rem;
+                    content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+                    color: white; /* Change the color */
+                    font-weight: bold; /* If you want it to be bold */
+                    display: inline-block; /* Needed to add space between the bullet and the text */
+                    width: $bulletSpacing; /* Also needed for space (tweak if needed) */
+                    margin-left: -$bulletSpacing; /* Also needed for space (tweak if needed) */
+                }
+            }
+        }
+    }
+
+    @media (width < $breakpointMobile){
+        padding-top: 2rem;
+        .vertical{
+            display: none;//remove vertical star separator!
+        }
+        .navBar{
+            position: relative;
+            top: -2rem;//shift back up after padding top is applied
+        }
+
+        header {
+            font-size: 3rem;
+        }
+
+        .workHistorySection{
+            .title{
+                flex-direction: column;
+            }
+        }
+
+        .content{
+            flex-direction: column;
+            padding: 0 1rem;
+        }
+    }
+}

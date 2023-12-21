@@ -84,10 +84,6 @@ body {
   line-height: 1;
 }
 
-ol, ul {
-  list-style: none;
-}
-
 blockquote, q {
   quotes: none;
 }
@@ -125,6 +121,10 @@ a {
   width: 100vw;
   height: 100vh;
   scroll-behavior: smooth;
+}
+
+strong {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=index.css.map */

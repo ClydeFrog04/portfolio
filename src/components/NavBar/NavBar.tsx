@@ -48,14 +48,14 @@ const NavBar = (props: NavBarProps) =>{
             <section className="navLinks">
                 <NavLink to={"/#about"}>About Me</NavLink>
                 <NavLink to={"/#projects"}>Projects</NavLink>
-                <NavLink to={"/"}>Resume</NavLink>
+                <NavLink to={"/resume"}>Resume</NavLink>
                 <NavLink to={"/"}>Contact</NavLink>
             </section>
             <section className="socials">
                 <NavLink className="socialIcon" to={"https://www.github.com/clydefrog04"} target={"_blank"}>
                     <i className="fa fa-github"/>
                 </NavLink>
-                <NavLink className="socialIcon" to={"/"}>
+                <NavLink className="socialIcon" to={"https://www.linkedin.com/in/randi-egan/"} target={"_blank"}>
                     <i className="fa fa-linkedin"/>
                 </NavLink>
                 <NavLink id="allProjects" to={"/oldHome"}>All Projects List</NavLink>
@@ -67,13 +67,13 @@ const NavBar = (props: NavBarProps) =>{
     )
 
     const desktop =(
-        <header className="navBar" ref={navBarRef}>
+        <nav className="navBar" ref={navBarRef}>
             {/*<img className={"beeIcon"} src={beeIcon} onClick={ () => {*/}
             {/*    navigate("/");*/}
             {/*}} alt="an icon that is also a bee buzzzzzz"/>*/}
             <NavLink to={"/"} className={"name"}>Randi Egan</NavLink>
             {sections}
-        </header>
+        </nav>
     )
 
     const mobile = (
