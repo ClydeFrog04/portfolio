@@ -14,6 +14,7 @@ import {StateContext} from "./contexts/StateContext.tsx";
 import SourdoughCalcPage
     from "@portfolio-monorepo/sourdough-calculator/src/pages/SourdoughCalcPage/SourdoughCalcPage.tsx";
 import Board from "@portfolio-monorepo/react-tac-toe/src/Board.tsx";
+import ResumePage from "./pages/Resume/ResumePage.tsx";
 
 function App() {
     const navigate = useNavigate();
@@ -156,10 +157,19 @@ function App() {
                 <Route
                     path={"aboutMe"}
                     element={
-                    <>
-                        <NavBar/>
-                        <AboutMe/>
-                    </>
+                        <>
+                            <NavBar/>
+                            <AboutMe/>
+                        </>
+                    }
+                />
+                <Route
+                    path={"resume"}
+                    element={
+                        <>
+                            <NavBar/>
+                            <ResumePage/>
+                        </>
                     }
                 />
                 <Route

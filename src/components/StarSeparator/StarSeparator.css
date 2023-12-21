@@ -1,0 +1,70 @@
+@charset "UTF-8";
+.rightAlign {
+  text-align: right;
+}
+
+.leftAlign {
+  text-align: left;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.fadeOut {
+  animation: fadeout 0.5s forwards;
+}
+
+.fadeIn {
+  animation: fadein 0.5s forwards;
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.75rem;
+  }
+}
+.starSeparator {
+  width: 100%;
+  position: relative;
+  margin-bottom: 3rem;
+}
+.starSeparator::before {
+  content: " ";
+  border-bottom: 2px solid white;
+  width: 100%;
+  display: block;
+}
+.starSeparator::after {
+  content: "✦";
+  font-size: 4rem;
+  position: absolute;
+  left: var(--leftPosition);
+  top: calc(-2rem + 1.5px);
+}
+
+/*# sourceMappingURL=StarSeparator.css.map */
