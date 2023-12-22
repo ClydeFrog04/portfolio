@@ -143,6 +143,18 @@
   }
   .resumePage header {
     font-size: 3rem;
+    padding: 0;
+  }
+  .resumePage header img {
+    float: right;
+    max-width: 150px;
+    max-height: 150px;
+    shape-outside: ellipse(50% 50%);
+  }
+  .resumePage header .info {
+    font-size: 1.5rem;
+    width: auto;
+    flex-basis: 40%;
   }
   .resumePage .workHistorySection .title {
     flex-direction: column;

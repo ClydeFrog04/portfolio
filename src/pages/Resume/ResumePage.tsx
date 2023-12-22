@@ -34,7 +34,7 @@ const ResumePage = (props: ResumePageProps) => {
             <StarSeparator starPosition={18}/>
             <header>
                 <span className="info">
-                    <strong>Creative Software Developer</strong> driven by Innovation.
+                    <strong>Creative Software Developer</strong> driven by innovation.
                 </span>
                 <img id="headshot" src={headshot} alt="This is a picture of me!"/>
             </header>

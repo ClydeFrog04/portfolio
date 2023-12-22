@@ -120,6 +120,21 @@
 
         header {
             font-size: 3rem;
+            //display: inline;
+            padding: 0;
+
+            img{
+                float: right;
+                max-width: 150px;
+                max-height: 150px;
+                shape-outside: ellipse(50% 50%);//todo: this doesn't work for this particular situation but i'd like to explore the use of this a bit more!
+            }
+
+            .info{
+                font-size: 1.5rem;
+                width: auto;
+                flex-basis: 40%;
+            }
         }
 
         .workHistorySection{
