@@ -110,7 +110,7 @@
 
     @media (width < $breakpointMobile){
         padding-top: 2rem;
-        .vertical{
+        .starSeparator.vertical{
             display: none;//remove vertical star separator!
         }
         .navBar{

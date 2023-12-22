@@ -134,7 +134,7 @@
   .resumePage {
     padding-top: 2rem;
   }
-  .resumePage .vertical {
+  .resumePage .starSeparator.vertical {
     display: none;
   }
   .resumePage .navBar {
