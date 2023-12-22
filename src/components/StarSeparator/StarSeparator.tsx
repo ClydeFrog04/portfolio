@@ -11,10 +11,15 @@ const StarSeparator = (props: StarSeparatorProps) =>{
     const TAG = "[StarSeparator.tsx]";
 
     const horizontal = (
-        <div className="starSeparator" style={{"--leftPosition": `${props.starPosition}%`} as React.CSSProperties}/>
+        // <div className="starSeparator" style={{"--leftPosition": `${props.starPosition}%`} as React.CSSProperties}/>
+        <div className="starSeparator" style={{"--leftPosition": `${props.starPosition}%`} as React.CSSProperties}>
+            <div id="lineWithStar"></div>
+        </div>
     );
     const vertical = (
-        <div className="starSeparator vertical" style={{"--verticalPosition": `${props.starPosition}%`, "--verticalHeight": `${props.verticalHeight}px`} as React.CSSProperties}/>
+        <div className="starSeparator vertical" style={{"--verticalPosition": `${props.starPosition}%`, "--verticalHeight": `${props.verticalHeight}px`} as React.CSSProperties}>
+            <div id="lineWithStar"></div>
+        </div>
     );
     return props.vertical === true ? vertical : horizontal;
 }

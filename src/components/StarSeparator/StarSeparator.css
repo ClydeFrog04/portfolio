@@ -48,28 +48,83 @@
     font-size: 2.75rem;
   }
 }
+/*
 .starSeparator {
-  position: relative;
-  margin: 3rem 0;
+    position: relative;
+    margin: 3rem 0;
+    &::before {
+        content: ' ';
+        border-bottom: 2px solid #a4a4a4;
+        width: 100%;
+        display: block;
+    }
+
+    &::after {
+        content: "\2726";
+        font-size: 4rem;
+        position: absolute;
+        color: white;
+        left: var(--leftPosition);
+        top: calc(-2rem + 1.5px);//todo: figure out actual positioning
+    }
+
+    &.vertical{
+        width: 3.2rem;
+        height: var(--verticalHeight);
+        margin: 0;
+        &::before{
+            border-bottom: 0;
+            border-left: 2px solid #a4a4a4;
+            height: 100%;
+            position: absolute;
+            left: 1.58rem;
+        }
+
+        &::after{
+            top: calc(var(--verticalPosition) - 1.58rem);
+
+        }
+    }
 }
-.starSeparator::before {
-  content: " ";
-  border-bottom: 2px solid #a4a4a4;
+*/
+.starSeparator {
   width: 100%;
-  display: block;
+  height: 50px;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
 }
-.starSeparator::after {
-  content: "✦";
-  font-size: 4rem;
+.starSeparator #lineWithStar {
   position: absolute;
-  color: white;
+  margin: 0 auto;
+  height: 2px;
+  width: 100%;
+  background: #a4a4a4;
+  border-radius: 15px;
+}
+.starSeparator:after {
+  content: "✦";
+  font: 50px monospace;
+  position: absolute;
+  cursor: pointer;
+  outline: none;
+  top: 0;
   left: var(--leftPosition);
-  top: calc(-2rem + 1.5px);
+  line-height: 52px;
 }
 .starSeparator.vertical {
   width: 3.2rem;
   height: var(--verticalHeight);
   margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.starSeparator.vertical #lineWithStar {
+  background: #a4a4a4;
+  height: 100%;
+  width: 2px;
 }
 .starSeparator.vertical::before {
   border-bottom: 0;
