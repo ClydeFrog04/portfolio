@@ -1,4 +1,4 @@
-import React, {forwardRef, HTMLAttributes, useEffect, useReducer, useState} from "react";
+import React, {forwardRef, HTMLAttributes, useEffect, useReducer, useRef, useState} from "react";
 import "./Carousel.css";
 import {Project} from "../../utils/typeDefs.ts";
 import {useNavigate} from "react-router-dom";
@@ -11,9 +11,12 @@ type CarouselProps = {//alt+4 let go :p
 } & HTMLAttributes<HTMLDivElement>;
 
 // const Carousel = forwardRef(function Carousel(props: CarouselProps, ref) => {
-const Carousel = forwardRef(function Carousel(props: CarouselProps, ref: React.Ref<HTMLDivElement>){
+const Carousel = forwardRef(function Carousel(props: CarouselProps, ref: React.Ref<HTMLDivElement>) {
     const TAG = "[Carousel.tsx]";
     const navigate = useNavigate();
+    const autoCycleTimer = useRef<NodeJS.Timer | null>(null);
+    const autoCycleInterval = 5000;//time for each cycle in ms
+
 
     const reducer = (state: number, action: { type: "INCREMENT" | "DECREMENT" }) => {
         let newState;
@@ -33,19 +36,49 @@ const Carousel = forwardRef(function Carousel(props: CarouselProps, ref: React.R
 
 
     useEffect(() => {
-        console.log(activeProject);
-    }, [activeProject]);
+        startAutoCycle();
+        return () => {
+            stopAutoCycle();
+        };
+    }, []);
+
+    const clearAndPauseAutoCycle = () => {
+        stopAutoCycle();
+
+        setTimeout(() => {
+            startAutoCycle();
+        }, 10_000);
+    };
+
+    const stopAutoCycle = () => {
+        clearInterval(autoCycleTimer.current as NodeJS.Timer);
+        autoCycleTimer.current = null;
+    };
+
+    const startAutoCycle = () => {
+        if (autoCycleTimer.current !== null) {
+            return;
+        }
+        autoCycleTimer.current = setInterval(() => {
+            dispatch({type: "INCREMENT"});
+        }, autoCycleInterval);
+    };
 
 
     return (
-        <div ref={ref} className={`carousel ${props.classes?.join(" ")}`.trimEnd()} aria-label={`carousel-of-${props.carouselLabel}`}>
-            <button className="prev" onClick={() => dispatch({type: "DECREMENT"})}>&#8656;</button>
-            <button className="next" onClick={() => dispatch({type: "INCREMENT"})}>&#8658;</button>
+        <div ref={ref} className={`carousel ${props.classes?.join(" ")}`.trimEnd()}
+             aria-label={`carousel-of-${props.carouselLabel}`}>
+            <button className="prev" onClick={() => {
+                clearAndPauseAutoCycle();
+                dispatch({type: "DECREMENT"});
+            }}>&#8656;</button>
+            <button className="next" onClick={() => {
+                clearAndPauseAutoCycle();
+                dispatch({type: "INCREMENT"});
+            }}>&#8658;</button>
             <ul>
                 {props.projects.map((project, index) => {
-                    console.log("project from loop:", project.name, project.href);
-                    return <li key={index} className="slide" data-active={activeProject === index} onClick={ (event) => {
-                        console.log("project was:", project.name, project.href);
+                    return <li key={index} className="slide" data-active={activeProject === index} onClick={(event) => {
                         navigate(project.href);
                     }}>
                         <img src={project.imgSrc} alt=""/>
