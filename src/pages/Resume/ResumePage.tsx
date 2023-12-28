@@ -20,8 +20,8 @@ const ResumePage = (props: ResumePageProps) => {
                     <h3>{jobTitle}</h3> <span className="timeline">[{timeline}]</span>
                 </div>
                 <ul className="bullets">
-                    {bullets.map((bullet) => {
-                        return <li>{bullet}</li>;
+                    {bullets.map((bullet, index) => {
+                        return <li key={index}>{bullet}</li>;
                     })}
                 </ul>
             </section>

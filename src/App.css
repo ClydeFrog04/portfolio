@@ -108,8 +108,25 @@
   padding: 1rem;
   width: 100vw;
 }
+.App .homeWrapper .buttonContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
 .App .homeWrapper .typeWriter {
   margin-bottom: 1rem;
+}
+.App .homeWrapper .button {
+  width: 25%;
+  font-size: 1.5rem;
+}
+@media (width <= 480px) {
+  .App .homeWrapper .button {
+    width: auto;
+    font-size: 1rem;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */

@@ -75,6 +75,8 @@ function App() {
                                 {/*<h1>Hello! Welcome to my site! Checkout some of my projects below!</h1>*/}
                                 {/*<span>Remember, this site is still a work in progress!</span>*/}
                                 {/*<span>Check out some of my project(s) while you're here!</span>*/}
+                                <div className="buttonContainer">
+
                                 <Button text={"Spotify DW Saver"} onClick={(e) => {
                                     navigate("/spotify");
                                 }}/>
@@ -98,6 +100,8 @@ function App() {
                                 <Button text={"Learn More!"} onClick={(e) => {
                                     navigate("/dissectButtons");
                                 }}/>
+                                </div>
+
                             </div>
                         </>
                     }

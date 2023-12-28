@@ -62,7 +62,7 @@
   transform: scale(110%);
 }
 .button:hover .shimmerContainer::before {
-  animation-duration: 2s;
+  animation-duration: 10s;
   animation-fill-mode: forwards;
 }
 .button::after {
@@ -78,10 +78,10 @@
 }
 .button .shimmerContainer {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
   z-index: -1;
 }
 .button .shimmerContainer::before {
@@ -89,14 +89,19 @@
   position: absolute;
   z-index: -2;
   left: -50%;
-  top: -150%;
+  top: -200%;
   width: 200%;
-  height: 400%;
+  height: 500%;
   background-repeat: no-repeat;
   background-size: 50% 50%, 50% 50%;
   background-position: 0 0, 0 100%, 100% 100%, 100% 0;
-  background-image: linear-gradient(#D02F56, #D02F56), linear-gradient(#A7D02F, #A7D02F), linear-gradient(#2FD0A9, #2FD0A9), linear-gradient(#582FD0, #582FD0);
-  animation: rotate 4s linear infinite;
+  /*
+          background: rgb(124,163,125);
+  background: radial-gradient(circle, rgba(124,163,125,1) 0%, rgba(154,214,156,1) 43%, rgba(178,255,180,1) 77%);
+           */
+  background: rgb(208, 47, 86);
+  background: linear-gradient(90deg, rgb(208, 47, 86) 27%, rgb(167, 208, 47) 39%, rgb(47, 208, 169) 52%, rgb(88, 47, 208) 63%);
+  animation: rotate 20s cubic-bezier(0.57, 0.42, 0.84, 0.68) infinite;
 }
 .button.dissect:hover {
   overflow: visible;
