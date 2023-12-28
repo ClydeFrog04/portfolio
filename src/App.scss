@@ -93,14 +93,29 @@
         gap: 1rem;
         padding: 1rem;
         width: 100vw;
+        .buttonContainer{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
 
         .typeWriter {
             margin-bottom: 1rem;
         }
+
+        .button{
+            width: 25%;
+            font-size: 1.5rem;
+        }
     }
 
     @media (width <= $breakpointMobile) {
-        //overflow: visible;
+        .homeWrapper .button{
+            width: auto;
+            font-size: 1rem;
+        }
     }
 }
 
