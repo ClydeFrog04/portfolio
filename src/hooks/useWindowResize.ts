@@ -1,6 +1,7 @@
 import {useEffect, useLayoutEffect, useState} from "react";
 
 export const useWindowResize = () => {
+    const verboseLogging = import.meta.env.VITE_VERBOSE_LOGGING === "true";
     const [dimensions, setDimensions] = useState({
         width: window.innerWidth,
         height: window.innerHeight
@@ -25,7 +26,9 @@ export const useWindowResize = () => {
     // }, []);
     useEffect(() => {
         const debounceHandler = debounce(() => {
-            console.log("resetting dimensions");
+            if(verboseLogging){
+                console.log("resetting dimensions");
+            }
             setDimensions({
                 // width: window.innerWidth,
                 // height: window.innerHeight
