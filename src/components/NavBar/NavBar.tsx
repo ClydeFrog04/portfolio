@@ -14,6 +14,7 @@ interface NavBarProps {
 
 const NavBar = (props: NavBarProps) =>{
     const TAG = "[NavBar.tsx]";
+    const verboseLogging = import.meta.env.VITE_VERBOSE_LOGGING === "true";
     const navigate = useNavigate();
     const {navBarHeight, setNavBarHeight} = useContext(StateContext);
     const breakpointMobile = 480;// from variables.scss
@@ -27,19 +28,26 @@ const NavBar = (props: NavBarProps) =>{
 
     useEffect(() => {
         if(navBarRef.current != null){
-            console.log("NAV BAR IS:", navBarRef.current?.clientHeight);
+            if(verboseLogging){
+                console.log(TAG, "NAV BAR IS:", navBarRef.current?.clientHeight);
+            }
             setNavBarHeight(navBarRef.current?.clientHeight);
         }
     }, [navBarRef.current]);
 
     useEffect(() => {
-        console.log(JSON.stringify(dimension));
+        let logText = "";
         if(dimension.width <= breakpointMobile){
-            console.log("window changed to mobile");
+            logText = "window changed to mobile";
             setDevType("mobile");
         } else{
-            console.log("window changed to desktop");
+            logText = "window changed to desktop";
             setDevType("desktop");
+        }
+
+        if(verboseLogging){
+            console.log(TAG, JSON.stringify(dimension));
+            console.log(TAG, logText);
         }
     }, [dimension]);
 
@@ -79,7 +87,6 @@ const NavBar = (props: NavBarProps) =>{
     const mobile = (
         <div className={`navBar menuContainer`}>
             <img src={beeIcon} alt="" onClick={() => {
-                console.log("bee clicked");
                 setMenuOpen(!menuOpen);
             }}/>
             <div className={`menu ${menuOpen ? "" : "hide"}`.trimEnd()} onClick={() => {
