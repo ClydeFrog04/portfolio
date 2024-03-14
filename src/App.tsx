@@ -2,7 +2,9 @@ import "./App.scss";
 import {Route, Routes, useNavigate} from "react-router-dom";
 import Button from "./components/Button/Button";
 import Calculatorinator from "@portfolio-monorepo/calculator/src/pages/Calculatorinator.tsx";
-import DiscoverWeeklySaver from "@portfolio-monorepo/SpotifyWeb/src/Pages/DiscoverWeeklySaver.tsx";
+// import DiscoverWeeklySaver from "packages/SpotifyWeb/src/Pages/DiscoverWeeklySaver/DiscoverWeeklySaver.tsx";
+import DiscoverWeeklySaver from "@portfolio-monorepo/SpotifyWeb/src/Pages/DiscoverWeeklySaver/DiscoverWeeklySaver.tsx";
+import LogoutPage from "@portfolio-monorepo/SpotifyWeb/src/Pages/LogoutPage/LogoutPage.tsx";
 import MazeGameContainer from "./pages/MazeGame/MazeGameContainer.tsx";
 import TypeWriter from "./components/TypeWriter/TypeWriter.tsx";
 import AboutMe from "./pages/AboutMe/AboutMe.tsx";
@@ -113,6 +115,17 @@ function App() {
                             <NavBar/>
                             <div className="spotifyContainer">
                                 <DiscoverWeeklySaver/>
+                            </div>
+                        </>
+                    }
+                />
+                <Route
+                    path={"spotify/logout"}
+                    element={
+                        <>
+                            <NavBar/>
+                            <div className="spotifyContainer">
+                                <LogoutPage/>
                             </div>
                         </>
                     }
