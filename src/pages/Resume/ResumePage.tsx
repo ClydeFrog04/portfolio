@@ -76,9 +76,25 @@ const ResumePage = (props: ResumePageProps) => {
                 <section className="workHistory">
                     <h2>Work Experience</h2>
                     {createWorkExperienceSection(
+                        "Senior Software Engineer",
+                        "Exostellar",
+                        "August 2024 - Present",
+                        [
+                            "Manage UI development for our GPU management platform",
+                            "Lead a team of four developers to build the web UI based on product specifications and designs",
+                            "Implemented a Jest testing framework from scratch, integrating it with GitHub Actions to ensure code quality before merging",
+                            "Responsible for hiring new team members for the UI team",
+                            "Migrate docker containers and images into kubernetes images and services",
+                            "Manage Docker configurations for the UI service",
+                            "Built and maintained Keycloak integration to manage authentication services",
+                            "Work with AWS for deployments via AWS CloudFormations",
+
+                        ]
+                    )}
+                    {createWorkExperienceSection(
                         "Software Engineer",
                         "Dish Network",
-                        "April 2021 - Present",
+                        "April 2021 - August 2024",
                         [
                             "Led the creation of a new application, revolutionizing set top box installations through a user-friendly web-based solution",
                             "Streamlined processes, increasing development speed, and simplifying operations which reduced install times by 30%",
